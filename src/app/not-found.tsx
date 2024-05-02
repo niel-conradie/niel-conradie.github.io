@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "404 | Page Not Found",
   description: "404 Page",
   icons: {
-    icon: "./favicon.ico",
+    icon: "/favicon.ico",
   },
 };
 

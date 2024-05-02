@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Contact | Portfolio",
   description: "Contact Page",
   icons: {
-    icon: "./favicon.ico",
+    icon: "/favicon.ico",
   },
 };
 

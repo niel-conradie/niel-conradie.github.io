@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Niel Conradie | Portfolio",
   description: "Portfolio Website",
   icons: {
-    icon: "./favicon.ico",
+    icon: "/favicon.ico",
   },
 };
 
