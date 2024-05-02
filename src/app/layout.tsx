@@ -12,6 +12,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Niel Conradie | Portfolio",
   description: "Portfolio Website",
+  icons: {
+    icon: "./favicon.ico",
+  },
 };
 
 const fontSans = FontSans({

@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home | Portfolio",
-  description: "Home Page",
+  title: "Contact | Portfolio",
+  description: "Contact Page",
   icons: {
     icon: "./favicon.ico",
   },
 };
 
-interface HomeLayoutProps {
+interface ContactLayoutProps {
   children: React.ReactNode;
 }
 
-export default function HomeLayout({ children }: HomeLayoutProps) {
+export default function ContactLayout({ children }: ContactLayoutProps) {
   return <>{children}</>;
 }

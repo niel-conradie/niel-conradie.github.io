@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home | Portfolio",
-  description: "Home Page",
+  title: "About | Portfolio",
+  description: "About Page",
   icons: {
     icon: "./favicon.ico",
   },
 };
 
-interface HomeLayoutProps {
+interface AboutLayoutProps {
   children: React.ReactNode;
 }
 
-export default function HomeLayout({ children }: HomeLayoutProps) {
+export default function AboutLayout({ children }: AboutLayoutProps) {
   return <>{children}</>;
 }
