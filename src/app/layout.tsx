@@ -12,9 +12,6 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Niel Conradie | Portfolio",
   description: "Portfolio Website",
-  icons: {
-    icon: "https://niel-conradie.github.io/favicon.ico",
-  },
 };
 
 const fontSans = FontSans({
@@ -29,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       <body
         className={cn("min-h-screen font-sans antialiased", fontSans.variable)}
       >

@@ -3,9 +3,6 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "404 | Page Not Found",
   description: "404 Page",
-  icons: {
-    icon: "https://niel-conradie.github.io/favicon.ico",
-  },
 };
 
 export default function NotFoundPage() {

@@ -3,9 +3,6 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact | Portfolio",
   description: "Contact Page",
-  icons: {
-    icon: "https://niel-conradie.github.io/favicon.ico",
-  },
 };
 
 interface ContactLayoutProps {
