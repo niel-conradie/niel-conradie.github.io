@@ -1,9 +1,0 @@
-html {
-  color-scheme: light dark;
-}
-
-body {
-  height: 100dvh;
-  display: grid;
-  place-items: center;
-}
