@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Projects | Portfolio",
   description: "Projects Page",
   icons: {
-    icon: "/favicon.ico",
+    icon: "https://niel-conradie.github.io/favicon.ico",
   },
 };
 
