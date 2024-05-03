@@ -1,1 +1,1 @@
-export { navLinks } from "@/constants/navLinks";
+export { routes, socials } from "@/constants/navigation";
