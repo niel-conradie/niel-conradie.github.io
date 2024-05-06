@@ -13,8 +13,8 @@ export default function ContactPage() {
         variants={fadeIn({
           direction: "up",
           distance: 0,
-          duration: 3,
-          delay: 0,
+          duration: 2,
+          delay: 0.25,
         })}
         initial="hidden"
         animate="show"

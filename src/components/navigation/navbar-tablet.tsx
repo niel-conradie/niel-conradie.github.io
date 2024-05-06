@@ -69,7 +69,6 @@ export default function NavbarTablet() {
                         </span>
                         <span className="text-2xl">{link.name}</span>
                       </div>
-                      <span className="sr-only">={link.name}</span>
                     </Link>
                   </Button>
                 </SheetClose>

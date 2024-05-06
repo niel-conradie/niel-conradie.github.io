@@ -26,7 +26,6 @@ export default function NavbarDesktop() {
                 href={link.href}
               >
                 <span className="text-sm">{link.name}</span>
-                <span className="sr-only">={link.name}</span>
               </Link>
             </Button>
           </li>

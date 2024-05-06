@@ -20,8 +20,8 @@ export default function NavbarMobile() {
       variants={fadeIn({
         direction: "up",
         distance: 50,
-        duration: 1,
-        delay: 0,
+        duration: 2,
+        delay: 0.25,
       })}
       initial="hidden"
       animate="show"
