@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 
 import { Inter as FontSans } from "next/font/google";
 
-import { Header, NavbarMobile, NavbarTablet } from "@/components/navigation";
+import { Header } from "@/components/navigation";
 import { ThemeProvider } from "@/components/theme/";
 
 import { cn } from "@/lib/utils";
@@ -37,8 +37,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <NavbarMobile />
-          <NavbarTablet />
           {children}
         </ThemeProvider>
       </body>

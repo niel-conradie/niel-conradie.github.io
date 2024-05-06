@@ -15,7 +15,12 @@ export default function NavbarDesktop() {
       <ul className="flex h-full items-center justify-center gap-x-4 px-4">
         {routes.map((link, index) => (
           <li key={index}>
-            <Button variant="ghost" aria-label={link.name} asChild>
+            <Button
+              className="transition-all duration-300"
+              variant="ghost"
+              aria-label={link.name}
+              asChild
+            >
               <Link
                 className={`${pathname === link.href ? "text-primary hover:text-primary" : ""}`}
                 href={link.href}

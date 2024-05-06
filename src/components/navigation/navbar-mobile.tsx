@@ -16,12 +16,21 @@ export default function NavbarMobile() {
         {routes.map((link, index) => {
           return (
             <li key={index}>
-              <Button variant="ghost" aria-label={link.name} asChild>
+              <Button
+                className="transition-all duration-300"
+                variant="ghost"
+                aria-label={link.name}
+                asChild
+              >
                 <Link
-                  className={`${pathname === link.href ? "text-primary hover:text-primary" : ""}`}
+                  className={`${pathname === link.href ? "scale-110 text-primary hover:text-primary" : ""}`}
                   href={link.href}
                 >
-                  <span className="text-2xl">{link.icon}</span>
+                  {pathname === link.href ? (
+                    <span className="text-2xl">{link.active}</span>
+                  ) : (
+                    <span className="text-2xl">{link.icon}</span>
+                  )}
                   <span className="sr-only">={link.name}</span>
                 </Link>
               </Button>

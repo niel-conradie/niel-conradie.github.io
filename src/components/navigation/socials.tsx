@@ -14,6 +14,7 @@ export default function Socials() {
           return (
             <li key={index}>
               <Button
+                className="transition-all duration-300 hover:scale-110 hover:text-primary"
                 variant="ghost"
                 size="icon"
                 aria-label={link.name}
