@@ -4,7 +4,7 @@ export default function Logo() {
   return (
     <Image
       alt="Image Test"
-      src="./favicon.ico"
+      src="./images/logo.png"
       width={200}
       height={200}
       priority

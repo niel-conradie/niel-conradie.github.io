@@ -3,15 +3,29 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { motion } from "framer-motion";
+
 import { Button } from "@/components/ui/button";
 
 import { routes } from "@/constants";
+
+import { fadeIn } from "@/utils";
 
 export default function NavbarMobile() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 z-50 h-[50px] w-full border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sm:hidden">
+    <motion.nav
+      className="fixed bottom-0 z-50 h-[50px] w-full border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sm:hidden"
+      variants={fadeIn({
+        direction: "up",
+        distance: 50,
+        duration: 1,
+        delay: 0,
+      })}
+      initial="hidden"
+      animate="show"
+    >
       <ul className="flex h-full items-center justify-center gap-x-8 px-4">
         {routes.map((link, index) => {
           return (
@@ -38,6 +52,6 @@ export default function NavbarMobile() {
           );
         })}
       </ul>
-    </nav>
+    </motion.nav>
   );
 }

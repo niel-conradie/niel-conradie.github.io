@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -10,16 +11,27 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetOverlay,
-  SheetPortal,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 
 import { routes } from "@/constants";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.5,
+      delayChildren: 0.5,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, x: -20, y: 0 },
+  show: { opacity: 1, x: 0, y: 0 },
+};
 
 export default function NavbarTablet() {
   const pathname = usePathname();
@@ -33,9 +45,14 @@ export default function NavbarTablet() {
       </div>
       <SheetContent side={"left"}>
         <nav className="flex h-full items-center justify-center">
-          <ul className="flex flex-col gap-y-10">
+          <motion.ul
+            className="flex flex-col gap-y-10"
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
             {routes.map((link, index) => (
-              <li key={index}>
+              <motion.li key={index} variants={item}>
                 <SheetClose asChild>
                   <Button
                     className="transition-all duration-300"
@@ -56,14 +73,10 @@ export default function NavbarTablet() {
                     </Link>
                   </Button>
                 </SheetClose>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </nav>
-
-        {/* <Link className="mt-10 text-lg font-medium" href={link.href}>
-                  {link.name}
-                </Link> */}
       </SheetContent>
     </Sheet>
   );

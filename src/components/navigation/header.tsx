@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import {
   Logo,
   NavbarDesktop,
@@ -7,10 +11,22 @@ import {
 } from "@/components/navigation";
 import { ThemeToggle } from "@/components/theme";
 
+import { fadeIn } from "@/utils";
+
 export default function Header() {
   return (
     <>
-      <header className="fixed top-0 z-50 h-[50px] w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <motion.header
+        className="fixed top-0 z-50 h-[50px] w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+        variants={fadeIn({
+          direction: "down",
+          distance: 50,
+          duration: 1,
+          delay: 0,
+        })}
+        initial="hidden"
+        animate="show"
+      >
         <div className="container grid h-full grid-cols-2 items-center px-4 lg:grid-cols-3">
           {/* COLUMN 1 START */}
           <div className="hidden lg:block">
@@ -40,7 +56,7 @@ export default function Header() {
           </div>
           {/* COLUMN 3 END */}
         </div>
-      </header>
+      </motion.header>
 
       <NavbarMobile />
     </>
