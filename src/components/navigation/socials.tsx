@@ -29,7 +29,7 @@ export default function Socials() {
                       aria-label={link.name}
                       asChild
                     >
-                      <Link href={link.href}>
+                      <Link href={link.href} target="_blank">
                         <span className="text-xl">{link.icon}</span>
                         <span className="sr-only">={link.name}</span>
                       </Link>

@@ -25,29 +25,17 @@ import {
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-import { filters, projects } from "@/constants";
+import { projects } from "@/constants";
 
 export default function Projects() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-  const [search, setSearch] = useState("");
-
-  // function filterProjects(search: string) {
-  //   return projects.filter((project) =>
-  //     project.tags.some((tag) =>
-  //       tag.toLowerCase().includes(search.toLowerCase()),
-  //     ),
-  //   );
-  // }
-
-  // const filteredProjects = filterProjects(search);
 
   useEffect(() => {
     if (!api) {
@@ -67,26 +55,6 @@ export default function Projects() {
 
   return (
     <>
-      {/* <div className="mb-4 text-center">
-        {filters.map((filter, index) => {
-          return (
-            <Button
-              key={index}
-              className="transition-all duration-300"
-              variant="ghost"
-              aria-label={filter.name}
-              onClick={() => setSearch(filter.value)}
-            >
-              <span
-                className={`tracking-wider ${search === filter.value ? "text-primary hover:text-primary" : ""}`}
-              >
-                {filter.name}
-              </span>
-            </Button>
-          );
-        })}
-      </div> */}
-
       <Carousel
         className="w-[350px] sm:w-[450px] xl:w-[1400px]"
         orientation="horizontal"
@@ -111,13 +79,12 @@ export default function Projects() {
                     {project.description}
                   </CardDescription>
                 </CardHeader>
-
                 <CardContent>
                   <Slideshow project={project} />
                 </CardContent>
-
                 <CardFooter>
                   <div className="h-full w-full">
+                    {/* FIXME: BUTTONS ON FIREFOX */}
                     <div className="flex items-center justify-between sm:justify-evenly">
                       {/* STACK START */}
                       <Dialog>
@@ -134,16 +101,20 @@ export default function Projects() {
                         </DialogTrigger>
                         <DialogContent className="h-[400px] w-[320px]">
                           <DialogHeader>
-                            <DialogTitle className="text-center">
+                            <DialogTitle className="mb-5 text-center">
                               Technology Stack
                             </DialogTitle>
-                            <DialogDescription></DialogDescription>
-                            <div className="flex flex-wrap items-center justify-center gap-4">
+                            <div className="flex flex-wrap items-center justify-center gap-2">
                               {project.tags.map((tag, index) => (
                                 <Badge key={index} variant="outline">
-                                  <span className="tracking-wider">
-                                    {tag.name}
-                                  </span>
+                                  <div className="flex items-center justify-center gap-x-1">
+                                    <span className="text-sm text-primary">
+                                      {tag.icon}
+                                    </span>
+                                    <span className="tracking-wider">
+                                      {tag.name}
+                                    </span>
+                                  </div>
                                 </Badge>
                               ))}
                             </div>
@@ -159,7 +130,7 @@ export default function Projects() {
                         aria-label="Source"
                         asChild
                       >
-                        <Link href={project.source}>
+                        <Link href={project.source} target="_blank">
                           <span className="tracking-wider text-primary">
                             Source
                           </span>
@@ -174,7 +145,7 @@ export default function Projects() {
                         aria-label="Preview"
                         asChild
                       >
-                        <Link href={project.preview}>
+                        <Link href={project.preview} target="_blank">
                           <span className="tracking-wider text-primary">
                             Preview
                           </span>

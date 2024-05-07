@@ -20,8 +20,8 @@ export default function ProjectsPage() {
         animate="show"
       >
         <div className="sm:mb-24">
-          <h2 className="mb-4 text-center text-2xl tracking-wider sm:text-4xl">
-            Projects
+          <h2 className="mb-8 text-center text-2xl tracking-wider sm:text-4xl">
+            Projects<span className="text-primary">.</span>
           </h2>
 
           <div className="">

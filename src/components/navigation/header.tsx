@@ -29,20 +29,20 @@ export default function Header() {
       >
         <div className="container grid h-full grid-cols-2 items-center px-4 lg:grid-cols-3">
           {/* COLUMN 1 START */}
-          <div className="hidden lg:block">
-            <div className="">
-              <NavbarDesktop />
-            </div>
-          </div>
-          {/* COLUMN 1 END */}
-
-          {/* COLUMN 2 START */}
           <div className="flex items-center sm:justify-center">
             <div className="hidden sm:block lg:hidden">
               <NavbarTablet />
             </div>
             <div className="">
               <Logo />
+            </div>
+          </div>
+          {/* COLUMN 1 END */}
+
+          {/* COLUMN 2 START */}
+          <div className="hidden lg:block">
+            <div className="">
+              <NavbarDesktop />
             </div>
           </div>
           {/* COLUMN 2 END */}

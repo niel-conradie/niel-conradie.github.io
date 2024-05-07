@@ -1,3 +1,8 @@
+import { BiLogoDjango } from "react-icons/bi";
+import { RiNextjsFill, RiNextjsLine } from "react-icons/ri";
+import { SiShadcnui } from "react-icons/si";
+import { TbBrandFramerMotion } from "react-icons/tb";
+
 export const projects = [
   {
     title: "Project 1",
@@ -11,8 +16,10 @@ export const projects = [
       { src: "./projects/4.jpg", alt: "Project 1" },
     ],
     tags: [
-      { name: "Django", icon: "Django" },
-      { name: "Next.js", icon: "Next.js" },
+      { name: "Django", icon: <BiLogoDjango /> },
+      { name: "Framer Motion", icon: <TbBrandFramerMotion /> },
+      { name: "Next.js", icon: <RiNextjsLine /> },
+      { name: "Shadcn/ui", icon: <SiShadcnui /> },
     ],
   },
   {
@@ -27,8 +34,8 @@ export const projects = [
       { src: "./projects/1.jpg", alt: "Project 2" },
     ],
     tags: [
-      { name: "Django", icon: "Django" },
-      { name: "Next.js", icon: "Next.js" },
+      { name: "Django", icon: <BiLogoDjango /> },
+      { name: "Next.js", icon: <RiNextjsFill /> },
     ],
   },
   {
@@ -42,7 +49,7 @@ export const projects = [
       { src: "./projects/1.jpg", alt: "Project 3" },
       { src: "./projects/2.jpg", alt: "Project 3" },
     ],
-    tags: [{ name: "Next.js", icon: "Next.js" }],
+    tags: [{ name: "Next.js", icon: <RiNextjsFill /> }],
   },
   {
     title: "Project 4",
@@ -55,7 +62,7 @@ export const projects = [
       { src: "./projects/2.jpg", alt: "Project 4" },
       { src: "./projects/3.jpg", alt: "Project 4" },
     ],
-    tags: [{ name: "Django", icon: "Django" }],
+    tags: [{ name: "Django", icon: <BiLogoDjango /> }],
   },
 ];
 

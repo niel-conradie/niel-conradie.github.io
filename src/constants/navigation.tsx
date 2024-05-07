@@ -27,7 +27,7 @@ export const routes = [
 export const socials = [
   {
     name: "GitHub",
-    href: "#",
+    href: "https://github.com/niel-conradie",
     icon: <FaGithub />,
   },
   { name: "LinkedIn", href: "#", icon: <FaLinkedin /> },

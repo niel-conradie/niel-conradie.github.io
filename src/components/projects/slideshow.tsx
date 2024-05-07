@@ -21,7 +21,7 @@ interface SlideshowProps {
     }[];
     tags: {
       name: string;
-      icon: string;
+      icon: any; // FIXME: Add Type
     }[];
   };
 }
