@@ -31,9 +31,9 @@ export default function Slideshow({ project }: SlideshowProps) {
 
   return (
     <Carousel
+      orientation="horizontal"
       plugins={[plugin.current]}
       opts={{
-        align: "start",
         loop: true,
         dragFree: true,
         watchDrag: false,
