@@ -1,20 +1,15 @@
 import { BiLogoDjango } from "react-icons/bi";
-import { RiNextjsFill, RiNextjsLine } from "react-icons/ri";
+import { RiNextjsLine } from "react-icons/ri";
 import { SiShadcnui } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 
 export const projects = [
   {
     title: "Project 1",
-    description: "Description 1",
+    description: "Django & Next.js Task Manager Application",
+    image: "./projects/1.jpg",
     source: "#",
     preview: "#",
-    images: [
-      { src: "./projects/1.jpg", alt: "Project 1" },
-      { src: "./projects/2.jpg", alt: "Project 1" },
-      { src: "./projects/3.jpg", alt: "Project 1" },
-      { src: "./projects/4.jpg", alt: "Project 1" },
-    ],
     tags: [
       { name: "Django", icon: <BiLogoDjango /> },
       { name: "Framer Motion", icon: <TbBrandFramerMotion /> },
@@ -24,59 +19,35 @@ export const projects = [
   },
   {
     title: "Project 2",
-    description: "Description 2",
+    description: "Django & Next.js Blogging Application",
+    image: "./projects/2.jpg",
     source: "#",
     preview: "#",
-    images: [
-      { src: "./projects/2.jpg", alt: "Project 2" },
-      { src: "./projects/3.jpg", alt: "Project 2" },
-      { src: "./projects/4.jpg", alt: "Project 2" },
-      { src: "./projects/1.jpg", alt: "Project 2" },
-    ],
     tags: [
       { name: "Django", icon: <BiLogoDjango /> },
-      { name: "Next.js", icon: <RiNextjsFill /> },
+      { name: "Framer Motion", icon: <TbBrandFramerMotion /> },
+      { name: "Next.js", icon: <RiNextjsLine /> },
+      { name: "Shadcn/ui", icon: <SiShadcnui /> },
     ],
   },
   {
     title: "Project 3",
-    description: "Description 3",
+    description: "Fullstack Next.js Music Player Application",
+    image: "./projects/3.jpg",
     source: "#",
     preview: "#",
-    images: [
-      { src: "./projects/3.jpg", alt: "Project 3" },
-      { src: "./projects/4.jpg", alt: "Project 3" },
-      { src: "./projects/1.jpg", alt: "Project 3" },
-      { src: "./projects/2.jpg", alt: "Project 3" },
+    tags: [
+      { name: "Framer Motion", icon: <TbBrandFramerMotion /> },
+      { name: "Next.js", icon: <RiNextjsLine /> },
+      { name: "Shadcn/ui", icon: <SiShadcnui /> },
     ],
-    tags: [{ name: "Next.js", icon: <RiNextjsFill /> }],
   },
   {
     title: "Project 4",
-    description: "Description 4",
+    description: "Fullstack Django Image Uploader Application",
     source: "#",
     preview: "#",
-    images: [
-      { src: "./projects/4.jpg", alt: "Project 4" },
-      { src: "./projects/1.jpg", alt: "Project 4" },
-      { src: "./projects/2.jpg", alt: "Project 4" },
-      { src: "./projects/3.jpg", alt: "Project 4" },
-    ],
+    image: "./projects/4.jpg",
     tags: [{ name: "Django", icon: <BiLogoDjango /> }],
-  },
-];
-
-export const filters = [
-  {
-    name: "All",
-    value: "",
-  },
-  {
-    name: "Django",
-    value: "Django",
-  },
-  {
-    name: "Next.js",
-    value: "Next.js",
   },
 ];
