@@ -21,7 +21,7 @@ export default function Header() {
         variants={fadeIn({
           direction: "down",
           distance: 50,
-          duration: 2,
+          duration: 1,
           delay: 0.25,
         })}
         initial="hidden"

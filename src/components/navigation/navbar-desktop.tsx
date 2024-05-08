@@ -16,16 +16,17 @@ export default function NavbarDesktop() {
         {routes.map((link, index) => (
           <li key={index}>
             <Button
-              className="transition-all duration-300"
+              className="transition-all duration-300 hover:text-primary"
               variant="ghost"
               aria-label={link.name}
               asChild
             >
-              <Link
-                className={`${pathname === link.href ? "text-primary hover:text-primary" : ""}`}
-                href={link.href}
-              >
-                <span className="text-sm">{link.name}</span>
+              <Link className="relative" href={link.href}>
+                <span
+                  className={`text-sm tracking-wider after:absolute after:bottom-2 after:left-[12.5%] after:block after:h-[1px] after:bg-primary after:text-center after:transition-all after:duration-1000 ${pathname === link.href ? "after:w-[75%]" : "after:w-0"}`}
+                >
+                  {link.name}
+                </span>
               </Link>
             </Button>
           </li>

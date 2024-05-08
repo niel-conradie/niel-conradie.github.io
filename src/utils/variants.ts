@@ -13,7 +13,7 @@ export const fadeIn = ({
   duration,
   delay,
   type = "tween",
-  ease = [0.25, 0.6, 0.3, 0.8],
+  ease = "linear",
 }: Props) => {
   return {
     hidden: {

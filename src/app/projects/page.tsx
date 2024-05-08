@@ -64,16 +64,26 @@ export default function ProjectsPage() {
         variants={fadeIn({
           direction: "up",
           distance: 0,
-          duration: 2,
+          duration: 1,
           delay: 0.25,
         })}
         initial="hidden"
         animate="show"
       >
         <div className="sm:mb-24">
-          <h2 className="mb-6 ml-2 text-center text-3xl tracking-wider sm:text-4xl">
+          <motion.h2
+            className="mb-6 ml-2 select-none text-center text-3xl tracking-wider sm:text-4xl"
+            variants={fadeIn({
+              direction: "up",
+              distance: 50,
+              duration: 1,
+              delay: 0.25,
+            })}
+            initial="hidden"
+            animate="show"
+          >
             Projects<span className="text-primary">.</span>
-          </h2>
+          </motion.h2>
 
           <div>
             <Carousel
@@ -92,24 +102,34 @@ export default function ProjectsPage() {
                   <CarouselItem key={index} className="xl:basis-1/3">
                     <Card className="h-[22.5rem] cursor-grab sm:h-[28.25rem] xl:h-[24.5rem]">
                       <CardHeader>
-                        <CardTitle className="text-center text-base tracking-wider sm:text-lg">
+                        <CardTitle className="select-none text-center text-base tracking-wider sm:text-lg">
                           {project.title}
                         </CardTitle>
 
-                        <CardDescription className="text-center text-sm tracking-wider sm:text-base">
+                        <CardDescription className="select-none text-center text-sm tracking-wider sm:text-base">
                           {project.description}
-                          <span className="text-primary">.</span>
                         </CardDescription>
                       </CardHeader>
 
                       <CardContent>
-                        <Image
-                          className="rounded-lg"
-                          src={project.image}
-                          alt={project.title}
-                          width={500}
-                          height={500}
-                        />
+                        <motion.div
+                          variants={fadeIn({
+                            direction: "up",
+                            distance: 0,
+                            duration: 0.75,
+                            delay: 0.5,
+                          })}
+                          initial="hidden"
+                          animate="show"
+                        >
+                          <Image
+                            className="select-none rounded-lg"
+                            src={project.image}
+                            alt={project.title}
+                            width={500}
+                            height={500}
+                          />
+                        </motion.div>
                       </CardContent>
 
                       <CardFooter>
@@ -122,16 +142,16 @@ export default function ProjectsPage() {
                                   variant="outline"
                                   aria-label="Stack"
                                 >
-                                  <span className="tracking-wider">Stack</span>
+                                  <span className="select-none tracking-wider ">
+                                    Stack
+                                  </span>
                                 </Button>
                               </DialogTrigger>
-
-                              <DialogContent className="h-96 w-80">
+                              <DialogContent className="h-[22.5rem] w-80">
                                 <DialogHeader>
-                                  <DialogTitle className="mb-5 text-center">
+                                  <DialogTitle className="mb-10 mt-5 select-none text-center">
                                     Technology Stack
                                   </DialogTitle>
-
                                   <div className="flex flex-wrap items-center justify-center gap-2">
                                     {project.tags.map((tag, index) => (
                                       <Badge key={index} variant="outline">
@@ -139,7 +159,7 @@ export default function ProjectsPage() {
                                           <span className="text-sm">
                                             {tag.icon}
                                           </span>
-                                          <span className="tracking-wider">
+                                          <span className="select-none tracking-wider">
                                             {tag.name}
                                           </span>
                                         </div>
@@ -157,7 +177,9 @@ export default function ProjectsPage() {
                               asChild
                             >
                               <Link href={project.source} target="_blank">
-                                <span className="tracking-wider">Source</span>
+                                <span className="select-none tracking-wider">
+                                  Source
+                                </span>
                               </Link>
                             </Button>
 
@@ -168,7 +190,9 @@ export default function ProjectsPage() {
                               asChild
                             >
                               <Link href={project.preview} target="_blank">
-                                <span className="tracking-wider">Preview</span>
+                                <span className="select-none tracking-wider">
+                                  Preview
+                                </span>
                               </Link>
                             </Button>
                           </div>

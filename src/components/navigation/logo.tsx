@@ -11,7 +11,7 @@ export default function Logo() {
       asChild
     >
       <Link href="/">
-        <h1 className="text-lg font-semibold">Niel Conradie</h1>
+        <h1 className="text-lg font-semibold tracking-wider">Niel Conradie</h1>
       </Link>
     </Button>
   );
