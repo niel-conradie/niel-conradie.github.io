@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 import { routes } from "@/constants";
 
-import { fadeIn } from "@/utils";
+import { fade } from "@/utils";
 
 export default function NavbarMobile() {
   const pathname = usePathname();
@@ -17,7 +17,7 @@ export default function NavbarMobile() {
   return (
     <motion.nav
       className="fixed bottom-0 z-50 h-[50px] w-full border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sm:hidden"
-      variants={fadeIn({
+      variants={fade({
         direction: "up",
         distance: 50,
         duration: 1,

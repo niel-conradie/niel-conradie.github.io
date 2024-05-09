@@ -1,1 +1,1 @@
-export { fadeIn } from "@/utils/variants";
+export { fade } from "@/utils/variants";

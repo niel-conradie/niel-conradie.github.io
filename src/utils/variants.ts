@@ -1,4 +1,4 @@
-interface Props {
+interface FadeProps {
   direction: "up" | "right" | "down" | "left";
   distance: number;
   duration: number;
@@ -7,14 +7,14 @@ interface Props {
   ease?: string | number[];
 }
 
-export const fadeIn = ({
+export const fade = ({
   direction,
   distance,
   duration,
   delay,
   type = "tween",
   ease = "linear",
-}: Props) => {
+}: FadeProps) => {
   return {
     hidden: {
       opacity: 0,

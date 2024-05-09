@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function Logo() {
   return (
     <Button
-      className="transition-all duration-300"
+      className="transition-all duration-300 hover:text-primary"
       variant="ghost"
       aria-label="Home"
       asChild

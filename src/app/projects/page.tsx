@@ -32,10 +32,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { LoaderProvider } from "@/components/utils";
 
 import { projects } from "@/constants";
 
-import { fadeIn } from "@/utils";
+import { fade } from "@/utils";
 
 export default function ProjectsPage() {
   const [api, setApi] = useState<CarouselApi>();
@@ -60,24 +61,15 @@ export default function ProjectsPage() {
 
   return (
     <main className="flex min-h-[calc(100dvh)] items-center justify-center px-4 py-[3.125rem] sm:pb-4 sm:pt-[3.125rem]">
-      <motion.div
-        variants={fadeIn({
-          direction: "up",
-          distance: 0,
-          duration: 1,
-          delay: 0.25,
-        })}
-        initial="hidden"
-        animate="show"
-      >
+      <LoaderProvider>
         <div className="sm:mb-24">
           <motion.h2
             className="mb-6 ml-2 select-none text-center text-3xl tracking-wider sm:text-4xl"
-            variants={fadeIn({
+            variants={fade({
               direction: "up",
               distance: 50,
               duration: 1,
-              delay: 0.25,
+              delay: 2.25,
             })}
             initial="hidden"
             animate="show"
@@ -113,11 +105,11 @@ export default function ProjectsPage() {
 
                       <CardContent>
                         <motion.div
-                          variants={fadeIn({
+                          variants={fade({
                             direction: "up",
                             distance: 0,
                             duration: 0.75,
-                            delay: 0.5,
+                            delay: 2.5,
                           })}
                           initial="hidden"
                           animate="show"
@@ -213,7 +205,7 @@ export default function ProjectsPage() {
             </p>
           </div>
         </div>
-      </motion.div>
+      </LoaderProvider>
     </main>
   );
 }

@@ -11,14 +11,14 @@ import {
 } from "@/components/navigation";
 import { ThemeToggle } from "@/components/theme";
 
-import { fadeIn } from "@/utils";
+import { fade } from "@/utils";
 
 export default function Header() {
   return (
     <>
       <motion.header
         className="fixed top-0 z-50 h-[50px] w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
-        variants={fadeIn({
+        variants={fade({
           direction: "down",
           distance: 50,
           duration: 1,
