@@ -29,7 +29,7 @@ export default function LoaderProvider({ children }: LoaderProviderProps) {
           direction: "up",
           distance: 0,
           duration: 0.25,
-          delay: 2,
+          delay: 1,
         })}
         initial="show"
         animate="hidden"
@@ -42,7 +42,7 @@ export default function LoaderProvider({ children }: LoaderProviderProps) {
           direction: "up",
           distance: 0,
           duration: 0.25,
-          delay: 2.25,
+          delay: 1.25,
         })}
         initial="hidden"
         animate="show"

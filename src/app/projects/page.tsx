@@ -57,7 +57,7 @@ export default function ProjectsPage() {
     });
   }, [api]);
 
-  const plugin = useRef(Autoplay({ delay: 15000, stopOnInteraction: true }));
+  const plugin = useRef(Autoplay({ delay: 10000, stopOnInteraction: true }));
 
   return (
     <main className="flex min-h-[calc(100dvh)] items-center justify-center px-4 py-[3.125rem] sm:pb-4 sm:pt-[3.125rem]">
@@ -69,7 +69,7 @@ export default function ProjectsPage() {
               direction: "up",
               distance: 50,
               duration: 1,
-              delay: 2.25,
+              delay: 1.5,
             })}
             initial="hidden"
             animate="show"
@@ -109,7 +109,7 @@ export default function ProjectsPage() {
                             direction: "up",
                             distance: 0,
                             duration: 0.75,
-                            delay: 2.5,
+                            delay: 1.5,
                           })}
                           initial="hidden"
                           animate="show"
