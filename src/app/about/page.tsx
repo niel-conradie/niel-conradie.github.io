@@ -65,7 +65,7 @@ export default function AboutPage() {
             className="mb-6 ml-2 select-none text-center text-3xl tracking-wider sm:text-4xl"
             variants={fade({
               direction: "up",
-              distance: 50,
+              distance: 25,
               duration: 1,
               delay: 1.5,
             })}
@@ -80,53 +80,88 @@ export default function AboutPage() {
               className="w-80 sm:w-[34.375rem] xl:w-[68.75rem]"
               defaultValue="technology"
             >
-              <TabsList className="grid grid-cols-3">
+              <TabsList className="grid grid-cols-3 ">
                 {categories.map((category, index) => (
-                  <TabsTrigger key={index} value={category.value}>
-                    <span className="select-none tracking-wider transition-all duration-300 hover:text-primary">
+                  <TabsTrigger
+                    key={index}
+                    className="transition-all duration-300 hover:!text-primary"
+                    value={category.value}
+                  >
+                    <span className="select-none tracking-wider">
                       {category.name}
                     </span>
                   </TabsTrigger>
                 ))}
               </TabsList>
 
+              {/* TECHNOLOGY START */}
               <TabsContent value="technology">
                 <Carousel
-                  orientation="horizontal"
                   setApi={setApi}
                   plugins={[plugin.current]}
                   opts={{
+                    align: "start",
                     loop: true,
                   }}
                   onMouseEnter={plugin.current.stop}
                   onMouseLeave={plugin.current.reset}
                 >
                   <CarouselContent>
-                    {Array.from({ length: 5 }).map((_, index) => (
+                    {technologies.map((technology, index) => (
                       <CarouselItem key={index} className="xl:basis-1/3">
                         <Card className="h-[22.8125rem] cursor-grab sm:h-[29.6875rem] xl:h-[24.6875rem]">
-                          <CardHeader></CardHeader>
-                          <CardContent className="">
-                            <span className="">{index + 1}</span>
+                          <CardHeader>
+                            <CardTitle className="select-none text-center text-base tracking-wider sm:text-lg">
+                              {technology.title}
+                            </CardTitle>
+                          </CardHeader>
+
+                          <CardContent>
+                            {technology.languages && (
+                              <div className="my-4 flex items-center justify-center">
+                                <ul className="flex flex-col gap-y-4">
+                                  {technology.languages.map(
+                                    (language, index) => (
+                                      <li key={index}>
+                                        <div className="ml-4 flex items-center gap-x-2">
+                                          <span
+                                            className={`text-lg ${language.name.toLowerCase()}`}
+                                          >
+                                            {language.icon}
+                                          </span>
+                                          <span className="">
+                                            {language.name}
+                                          </span>
+                                        </div>
+                                      </li>
+                                    ),
+                                  )}
+                                </ul>
+                              </div>
+                            )}
                           </CardContent>
+
                           <CardFooter></CardFooter>
                         </Card>
                       </CarouselItem>
                     ))}
                   </CarouselContent>
+                  {/* NAVIGATION */}
                   <div className="hidden sm:block">
                     <CarouselPrevious />
                     <CarouselNext />
                   </div>
                 </Carousel>
               </TabsContent>
+              {/* TECHNOLOGY END */}
 
+              {/* QUALIFICATION START */}
               <TabsContent value="qualification">
                 <Carousel
-                  orientation="horizontal"
                   setApi={setApi}
                   plugins={[plugin.current]}
                   opts={{
+                    align: "start",
                     loop: true,
                   }}
                   onMouseEnter={plugin.current.stop}
@@ -176,19 +211,22 @@ export default function AboutPage() {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
+                  {/* NAVIGATION */}
                   <div className="hidden sm:block">
                     <CarouselPrevious />
                     <CarouselNext />
                   </div>
                 </Carousel>
               </TabsContent>
+              {/* QUALIFICATION END */}
 
+              {/* EXPERIENCE START */}
               <TabsContent value="experience">
                 <Carousel
-                  orientation="horizontal"
                   setApi={setApi}
                   plugins={[plugin.current]}
                   opts={{
+                    align: "start",
                     loop: true,
                   }}
                   onMouseEnter={plugin.current.stop}
@@ -207,19 +245,21 @@ export default function AboutPage() {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
+                  {/* NAVIGATION */}
                   <div className="hidden sm:block">
                     <CarouselPrevious />
                     <CarouselNext />
                   </div>
                 </Carousel>
               </TabsContent>
+              {/* EXPERIENCE END */}
             </Tabs>
 
             <motion.p
-              className="z-30 mt-6 text-center text-sm text-muted-foreground sm:hidden"
+              className="mt-6 text-center text-sm text-muted-foreground sm:hidden"
               variants={fade({
                 direction: "down",
-                distance: 50,
+                distance: 25,
                 duration: 1,
                 delay: 1.5,
               })}

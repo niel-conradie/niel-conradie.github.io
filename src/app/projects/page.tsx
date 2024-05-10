@@ -67,7 +67,7 @@ export default function ProjectsPage() {
             className="mb-6 ml-2 select-none text-center text-3xl tracking-wider sm:text-4xl"
             variants={fade({
               direction: "up",
-              distance: 50,
+              distance: 25,
               duration: 1,
               delay: 1.5,
             })}
@@ -79,11 +79,11 @@ export default function ProjectsPage() {
 
           <div>
             <Carousel
-              className="z-40 w-80 sm:w-[31.375rem] xl:w-[68.875rem]"
-              orientation="horizontal"
+              className="w-80 sm:w-[34.375rem] xl:w-[68.75rem]"
               setApi={setApi}
               plugins={[plugin.current]}
               opts={{
+                align: "start",
                 loop: true,
               }}
               onMouseEnter={plugin.current.stop}
@@ -92,7 +92,7 @@ export default function ProjectsPage() {
               <CarouselContent>
                 {projects.map((project, index) => (
                   <CarouselItem key={index} className="xl:basis-1/3">
-                    <Card className="h-[22.5rem] cursor-grab sm:h-[28.25rem] xl:h-[24.5rem]">
+                    <Card className="h-fit cursor-grab">
                       <CardHeader>
                         <CardTitle className="select-none text-center text-base tracking-wider sm:text-lg">
                           {project.title}
@@ -119,75 +119,73 @@ export default function ProjectsPage() {
                             src={project.image}
                             alt={project.title}
                             width={500}
-                            height={500}
+                            height={282}
                           />
                         </motion.div>
                       </CardContent>
 
                       <CardFooter>
-                        <div className="h-full w-full">
-                          <div className="flex items-center justify-between sm:justify-evenly">
-                            <Dialog>
-                              <DialogTrigger asChild>
-                                <Button
-                                  className="w-20 transition-all duration-300 hover:text-primary"
-                                  variant="outline"
-                                  aria-label="Stack"
-                                >
-                                  <span className="select-none tracking-wider ">
-                                    Stack
-                                  </span>
-                                </Button>
-                              </DialogTrigger>
-                              <DialogContent className="h-[22.5rem] w-80">
-                                <DialogHeader>
-                                  <DialogTitle className="mb-10 mt-5 select-none text-center">
-                                    Technology Stack
-                                  </DialogTitle>
-                                  <div className="flex flex-wrap items-center justify-center gap-2">
-                                    {project.tags.map((tag, index) => (
-                                      <Badge key={index} variant="outline">
-                                        <div className="flex items-center justify-center gap-x-2">
-                                          <span className="text-sm">
-                                            {tag.icon}
-                                          </span>
-                                          <span className="select-none tracking-wider">
-                                            {tag.name}
-                                          </span>
-                                        </div>
-                                      </Badge>
-                                    ))}
-                                  </div>
-                                </DialogHeader>
-                              </DialogContent>
-                            </Dialog>
-
-                            <Button
-                              className="w-20 transition-all duration-300 hover:text-primary"
-                              variant="outline"
-                              aria-label="Source"
-                              asChild
-                            >
-                              <Link href={project.source} target="_blank">
-                                <span className="select-none tracking-wider">
-                                  Source
+                        <div className="grid w-full grid-cols-3 gap-x-6 sm:gap-x-12 xl:gap-x-6">
+                          <Dialog>
+                            <DialogTrigger asChild>
+                              <Button
+                                className="transition-all duration-300 hover:text-primary"
+                                variant="outline"
+                                aria-label="Stack"
+                              >
+                                <span className="select-none tracking-wider ">
+                                  Stack
                                 </span>
-                              </Link>
-                            </Button>
+                              </Button>
+                            </DialogTrigger>
+                            <DialogContent className="h-[23.4375rem] w-80">
+                              <DialogHeader>
+                                <DialogTitle className="mb-10 mt-5 select-none text-center">
+                                  Technology Stack
+                                </DialogTitle>
+                                <div className="flex flex-wrap items-center justify-center gap-2">
+                                  {project.tags.map((tag, index) => (
+                                    <Badge key={index} variant="outline">
+                                      <div className="flex items-center justify-center gap-x-2">
+                                        <span className="text-sm">
+                                          {tag.icon}
+                                        </span>
+                                        <span className="select-none tracking-wider">
+                                          {tag.name}
+                                        </span>
+                                      </div>
+                                    </Badge>
+                                  ))}
+                                </div>
+                              </DialogHeader>
+                            </DialogContent>
+                          </Dialog>
 
-                            <Button
-                              className="w-20 transition-all duration-300 hover:text-primary"
-                              variant="outline"
-                              aria-label="Source"
-                              asChild
-                            >
-                              <Link href={project.preview} target="_blank">
-                                <span className="select-none tracking-wider">
-                                  Preview
-                                </span>
-                              </Link>
-                            </Button>
-                          </div>
+                          <Button
+                            className="transition-all duration-300 hover:text-primary"
+                            variant="outline"
+                            aria-label="Source"
+                            asChild
+                          >
+                            <Link href={project.source} target="_blank">
+                              <span className="select-none tracking-wider">
+                                Source
+                              </span>
+                            </Link>
+                          </Button>
+
+                          <Button
+                            className="transition-all duration-300 hover:text-primary"
+                            variant="outline"
+                            aria-label="Source"
+                            asChild
+                          >
+                            <Link href={project.preview} target="_blank">
+                              <span className="select-none tracking-wider">
+                                Preview
+                              </span>
+                            </Link>
+                          </Button>
                         </div>
                       </CardFooter>
                     </Card>
@@ -201,10 +199,10 @@ export default function ProjectsPage() {
             </Carousel>
 
             <motion.p
-              className="z-30 mt-6 text-center text-sm text-muted-foreground sm:hidden"
+              className="mt-6 text-center text-sm text-muted-foreground sm:hidden"
               variants={fade({
                 direction: "down",
-                distance: 50,
+                distance: 25,
                 duration: 1,
                 delay: 1.5,
               })}

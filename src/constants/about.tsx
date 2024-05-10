@@ -1,10 +1,58 @@
+import {
+  SiCss3,
+  SiHtml5,
+  SiJavascript,
+  SiPython,
+  SiSass,
+  SiTypescript,
+} from "react-icons/si";
+
 export const categories = [
   { name: "Technology", value: "technology" },
   { name: "Qualification", value: "qualification" },
   { name: "Experience", value: "experience" },
 ];
 
-export const technologies = [];
+export const technologies = [
+  {
+    title: "Languages",
+    languages: [
+      {
+        name: "Python",
+        icon: <SiPython />,
+      },
+      {
+        name: "JavaScript",
+        icon: <SiJavascript />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript />,
+      },
+      {
+        name: "Html",
+        icon: <SiHtml5 />,
+      },
+      {
+        name: "Css",
+        icon: <SiCss3 />,
+      },
+      {
+        name: "Sass",
+        icon: <SiSass />,
+      },
+    ],
+  },
+  {
+    title: "Backend",
+  },
+  {
+    title: "Frontend",
+  },
+  {
+    title: "Utility",
+  },
+];
 
 export const qualifications = [
   {
