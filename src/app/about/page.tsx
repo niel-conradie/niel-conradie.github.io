@@ -31,10 +31,9 @@ import { fade } from "@/utils";
 
 import {
   categories,
-  description,
-  experience,
-  qualification,
-  technology,
+  experiences,
+  qualifications,
+  technologies,
 } from "@/constants/about";
 
 export default function AboutPage() {
@@ -63,7 +62,7 @@ export default function AboutPage() {
       <LoaderProvider>
         <div className="sm:mb-24">
           <motion.h2
-            className="z-30 mb-6 ml-2 select-none text-center text-3xl tracking-wider sm:text-4xl"
+            className="mb-6 ml-2 select-none text-center text-3xl tracking-wider sm:text-4xl"
             variants={fade({
               direction: "up",
               distance: 50,
@@ -76,134 +75,159 @@ export default function AboutPage() {
             About<span className="text-primary">.</span>
           </motion.h2>
 
-          <div className="flex flex-col items-center justify-center gap-6 xl:flex-row xl:gap-x-28">
-            <div className="hidden w-96 sm:flex sm:w-[31.375rem]">
-              <p className="tracking-wider">{description}</p>
-            </div>
+          <div>
+            <Tabs
+              className="w-80 sm:w-[34.375rem] xl:w-[68.75rem]"
+              defaultValue="technology"
+            >
+              <TabsList className="grid grid-cols-3">
+                {categories.map((category, index) => (
+                  <TabsTrigger key={index} value={category.value}>
+                    <span className="select-none tracking-wider transition-all duration-300 hover:text-primary">
+                      {category.name}
+                    </span>
+                  </TabsTrigger>
+                ))}
+              </TabsList>
 
-            <div className="z-40">
-              <Tabs
-                defaultValue="technology"
-                className="w-80 sm:w-[31.375rem] xl:w-[402px]"
-              >
-                <TabsList className="grid grid-cols-3">
-                  {categories.map((category, index) => (
-                    <TabsTrigger key={index} value={category.value}>
-                      <span className="tracking-wider transition-all duration-300 hover:text-primary">
-                        {category.name}
-                      </span>
-                    </TabsTrigger>
-                  ))}
-                </TabsList>
+              <TabsContent value="technology">
+                <Carousel
+                  orientation="horizontal"
+                  setApi={setApi}
+                  plugins={[plugin.current]}
+                  opts={{
+                    loop: true,
+                  }}
+                  onMouseEnter={plugin.current.stop}
+                  onMouseLeave={plugin.current.reset}
+                >
+                  <CarouselContent>
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <CarouselItem key={index} className="xl:basis-1/3">
+                        <Card className="h-[22.8125rem] cursor-grab sm:h-[29.6875rem] xl:h-[24.6875rem]">
+                          <CardHeader></CardHeader>
+                          <CardContent className="">
+                            <span className="">{index + 1}</span>
+                          </CardContent>
+                          <CardFooter></CardFooter>
+                        </Card>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <div className="hidden sm:block">
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </div>
+                </Carousel>
+              </TabsContent>
 
-                <TabsContent value="technology">
-                  <Carousel
-                    orientation="horizontal"
-                    setApi={setApi}
-                    plugins={[plugin.current]}
-                    opts={{
-                      loop: true,
-                    }}
-                    onMouseEnter={plugin.current.stop}
-                    onMouseLeave={plugin.current.reset}
-                  >
-                    <CarouselContent>
-                      {Array.from({ length: 5 }).map((_, index) => (
-                        <CarouselItem key={index}>
-                          <Card className="h-[22.5rem] cursor-grab sm:h-[28.25rem] xl:h-[22.5rem]">
-                            <CardHeader></CardHeader>
-                            <CardContent className="">
-                              <span className="">{index + 1}</span>
-                            </CardContent>
-                            <CardFooter></CardFooter>
-                          </Card>
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    <div className="hidden sm:block">
-                      <CarouselPrevious />
-                      <CarouselNext />
-                    </div>
-                  </Carousel>
-                </TabsContent>
+              <TabsContent value="qualification">
+                <Carousel
+                  orientation="horizontal"
+                  setApi={setApi}
+                  plugins={[plugin.current]}
+                  opts={{
+                    loop: true,
+                  }}
+                  onMouseEnter={plugin.current.stop}
+                  onMouseLeave={plugin.current.reset}
+                >
+                  <CarouselContent>
+                    {qualifications.map((qualification, index) => (
+                      <CarouselItem key={index} className="xl:basis-1/3">
+                        <Card className="h-[22.8125rem] cursor-grab sm:h-[29.6875rem] xl:h-[24.6875rem]">
+                          <CardHeader>
+                            <CardTitle className="select-none text-center text-base tracking-wider sm:text-lg">
+                              {qualification.title}
+                            </CardTitle>
 
-                <TabsContent value="qualification">
-                  <Carousel
-                    orientation="horizontal"
-                    setApi={setApi}
-                    plugins={[plugin.current]}
-                    opts={{
-                      loop: true,
-                    }}
-                    onMouseEnter={plugin.current.stop}
-                    onMouseLeave={plugin.current.reset}
-                  >
-                    <CarouselContent>
-                      {Array.from({ length: 5 }).map((_, index) => (
-                        <CarouselItem key={index}>
-                          <Card className="h-[22.5rem] cursor-grab sm:h-[28.25rem] xl:h-[22.5rem]">
-                            <CardHeader></CardHeader>
-                            <CardContent className="">
-                              <span className="">{index + 1}</span>
-                            </CardContent>
-                            <CardFooter></CardFooter>
-                          </Card>
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    <div className="hidden sm:block">
-                      <CarouselPrevious />
-                      <CarouselNext />
-                    </div>
-                  </Carousel>
-                </TabsContent>
+                            <CardDescription className="select-none text-center text-sm tracking-wider sm:text-base">
+                              {qualification.location}
+                            </CardDescription>
+                          </CardHeader>
 
-                <TabsContent value="experience">
-                  <Carousel
-                    orientation="horizontal"
-                    setApi={setApi}
-                    plugins={[plugin.current]}
-                    opts={{
-                      loop: true,
-                    }}
-                    onMouseEnter={plugin.current.stop}
-                    onMouseLeave={plugin.current.reset}
-                  >
-                    <CarouselContent>
-                      {Array.from({ length: 5 }).map((_, index) => (
-                        <CarouselItem key={index}>
-                          <Card className="h-[22.5rem] cursor-grab sm:h-[28.25rem] xl:h-[22.5rem]">
-                            <CardHeader></CardHeader>
-                            <CardContent className="">
-                              <span className="">{index + 1}</span>
-                            </CardContent>
-                            <CardFooter></CardFooter>
-                          </Card>
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    <div className="hidden sm:block">
-                      <CarouselPrevious />
-                      <CarouselNext />
-                    </div>
-                  </Carousel>
-                </TabsContent>
-              </Tabs>
+                          <CardContent>
+                            <Image
+                              className="select-none rounded-lg"
+                              src={qualification.image}
+                              alt={qualification.title}
+                              width={500}
+                              height={500}
+                            />
+                          </CardContent>
 
-              <motion.p
-                className="z-30 mt-6 text-center text-sm text-muted-foreground sm:hidden"
-                variants={fade({
-                  direction: "down",
-                  distance: 50,
-                  duration: 1,
-                  delay: 1.5,
-                })}
-                initial="hidden"
-                animate="show"
-              >
-                {current} of {count}
-              </motion.p>
-            </div>
+                          <CardFooter>
+                            <div className="flex h-full w-full items-center justify-center">
+                              <Button
+                                className="w-full transition-all duration-300 hover:text-primary"
+                                variant="outline"
+                                aria-label="Certificate"
+                                asChild
+                              >
+                                <Link href={qualification.href} target="_blank">
+                                  <span className="select-none tracking-wider">
+                                    Certificate
+                                  </span>
+                                </Link>
+                              </Button>
+                            </div>
+                          </CardFooter>
+                        </Card>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <div className="hidden sm:block">
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </div>
+                </Carousel>
+              </TabsContent>
+
+              <TabsContent value="experience">
+                <Carousel
+                  orientation="horizontal"
+                  setApi={setApi}
+                  plugins={[plugin.current]}
+                  opts={{
+                    loop: true,
+                  }}
+                  onMouseEnter={plugin.current.stop}
+                  onMouseLeave={plugin.current.reset}
+                >
+                  <CarouselContent>
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <CarouselItem key={index} className="xl:basis-1/3">
+                        <Card className="h-[22.8125rem] cursor-grab sm:h-[29.6875rem] xl:h-[24.6875rem]">
+                          <CardHeader></CardHeader>
+                          <CardContent className="">
+                            <span className="">{index + 1}</span>
+                          </CardContent>
+                          <CardFooter></CardFooter>
+                        </Card>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <div className="hidden sm:block">
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </div>
+                </Carousel>
+              </TabsContent>
+            </Tabs>
+
+            <motion.p
+              className="z-30 mt-6 text-center text-sm text-muted-foreground sm:hidden"
+              variants={fade({
+                direction: "down",
+                distance: 50,
+                duration: 1,
+                delay: 1.5,
+              })}
+              initial="hidden"
+              animate="show"
+            >
+              {current} of {count}
+            </motion.p>
           </div>
         </div>
       </LoaderProvider>
