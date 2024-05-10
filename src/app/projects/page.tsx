@@ -57,7 +57,7 @@ export default function ProjectsPage() {
     });
   }, [api]);
 
-  const plugin = useRef(Autoplay({ delay: 10000, stopOnInteraction: true }));
+  const plugin = useRef(Autoplay({ delay: 7500, stopOnInteraction: true }));
 
   return (
     <main className="flex min-h-[calc(100dvh)] items-center justify-center px-4 py-[3.125rem] sm:pb-4 sm:pt-[3.125rem]">
@@ -79,7 +79,7 @@ export default function ProjectsPage() {
 
           <div>
             <Carousel
-              className="w-80 sm:w-[31.375rem] xl:w-[68.875rem]"
+              className="z-40 w-80 sm:w-[31.375rem] xl:w-[68.875rem]"
               orientation="horizontal"
               setApi={setApi}
               plugins={[plugin.current]}
@@ -200,9 +200,19 @@ export default function ProjectsPage() {
               </div>
             </Carousel>
 
-            <p className="mt-6 text-center text-sm text-muted-foreground sm:hidden">
+            <motion.p
+              className="z-30 mt-6 text-center text-sm text-muted-foreground sm:hidden"
+              variants={fade({
+                direction: "down",
+                distance: 50,
+                duration: 1,
+                delay: 1.5,
+              })}
+              initial="hidden"
+              animate="show"
+            >
               {current} of {count}
-            </p>
+            </motion.p>
           </div>
         </div>
       </LoaderProvider>
