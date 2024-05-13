@@ -77,7 +77,7 @@ export default function AboutPage() {
 
           <div>
             <Tabs
-              className="w-80 sm:w-[34.375rem] xl:w-[68.75rem]"
+              className="w-80 sm:w-[40rem] xl:w-[68.75rem]"
               defaultValue="technology"
             >
               <TabsList className="grid grid-cols-3 ">
@@ -108,8 +108,11 @@ export default function AboutPage() {
                 >
                   <CarouselContent>
                     {technologies.map((technology, index) => (
-                      <CarouselItem key={index} className="xl:basis-1/3">
-                        <Card className="h-[22.8125rem] cursor-grab sm:h-[29.6875rem] xl:h-[24.6875rem]">
+                      <CarouselItem
+                        key={index}
+                        className="sm:basis-1/2 xl:basis-1/3"
+                      >
+                        <Card className="h-[22.8125rem] cursor-grab sm:h-[23.4375rem] xl:h-[24.6875rem]">
                           <CardHeader>
                             <CardTitle className="select-none text-center text-base tracking-wider sm:text-lg">
                               {technology.title}
@@ -118,7 +121,7 @@ export default function AboutPage() {
 
                           <CardContent>
                             <div className="flex items-center justify-center">
-                              <ul className="flex flex-col gap-y-2">
+                              <ul className="flex flex-col gap-y-1">
                                 {technology.info.map((item, index) => (
                                   <li key={index}>
                                     <div className="flex select-none items-center justify-center gap-x-2">
@@ -159,8 +162,11 @@ export default function AboutPage() {
                 >
                   <CarouselContent>
                     {qualifications.map((qualification, index) => (
-                      <CarouselItem key={index} className="xl:basis-1/3">
-                        <Card className="h-[22.8125rem] cursor-grab sm:h-[29.6875rem] xl:h-[24.6875rem]">
+                      <CarouselItem
+                        key={index}
+                        className="sm:basis-1/2 xl:basis-1/3"
+                      >
+                        <Card className="h-[22.8125rem] cursor-grab sm:h-[23.4375rem] xl:h-[24.6875rem]">
                           <CardHeader>
                             <CardTitle className="select-none text-center text-base tracking-wider sm:text-lg">
                               {qualification.title}
@@ -172,13 +178,24 @@ export default function AboutPage() {
                           </CardHeader>
 
                           <CardContent>
-                            <Image
-                              className="select-none rounded-lg"
-                              src={qualification.image}
-                              alt={qualification.title}
-                              width={500}
-                              height={500}
-                            />
+                            <motion.div
+                              variants={fade({
+                                direction: "up",
+                                distance: 0,
+                                duration: 0.75,
+                                delay: 0,
+                              })}
+                              initial="hidden"
+                              animate="show"
+                            >
+                              <Image
+                                className="select-none rounded-lg"
+                                src={qualification.image}
+                                alt={qualification.title}
+                                width={500}
+                                height={500}
+                              />
+                            </motion.div>
                           </CardContent>
 
                           <CardFooter>
@@ -224,8 +241,11 @@ export default function AboutPage() {
                 >
                   <CarouselContent>
                     {Array.from({ length: 5 }).map((_, index) => (
-                      <CarouselItem key={index} className="xl:basis-1/3">
-                        <Card className="h-[22.8125rem] cursor-grab sm:h-[29.6875rem] xl:h-[24.6875rem]">
+                      <CarouselItem
+                        key={index}
+                        className="sm:basis-1/2 xl:basis-1/3"
+                      >
+                        <Card className="h-[22.8125rem] cursor-grab sm:h-[23.4375rem] xl:h-[24.6875rem]">
                           <CardHeader></CardHeader>
                           <CardContent className="">
                             <span className="">{index + 1}</span>

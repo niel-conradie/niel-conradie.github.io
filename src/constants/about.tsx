@@ -76,6 +76,11 @@ export const technologies = [
         class: "django-rest-framework",
       },
       {
+        name: "Next.js",
+        icon: <SiNextdotjs />,
+        class: "next-js",
+      },
+      {
         name: "PostgreSQL",
         icon: <SiPostgresql />,
         class: "postgresql",
@@ -85,6 +90,11 @@ export const technologies = [
   {
     title: "Frontend",
     info: [
+      {
+        name: "Django",
+        icon: <SiDjango />,
+        class: "django",
+      },
       {
         name: "React",
         icon: <SiReact />,
