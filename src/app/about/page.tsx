@@ -117,31 +117,21 @@ export default function AboutPage() {
                           </CardHeader>
 
                           <CardContent>
-                            {technology.languages && (
-                              <div className="my-4 flex items-center justify-center">
-                                <ul className="flex flex-col gap-y-4">
-                                  {technology.languages.map(
-                                    (language, index) => (
-                                      <li key={index}>
-                                        <div className="ml-4 flex items-center gap-x-2">
-                                          <span
-                                            className={`text-lg ${language.name.toLowerCase()}`}
-                                          >
-                                            {language.icon}
-                                          </span>
-                                          <span className="">
-                                            {language.name}
-                                          </span>
-                                        </div>
-                                      </li>
-                                    ),
-                                  )}
-                                </ul>
-                              </div>
-                            )}
+                            <div className="flex items-center justify-center">
+                              <ul className="flex flex-col gap-y-2">
+                                {technology.info.map((item, index) => (
+                                  <li key={index}>
+                                    <div className="flex select-none items-center justify-center gap-x-2">
+                                      <span className={`text-lg ${item.class}`}>
+                                        {item.icon}
+                                      </span>
+                                      <span className="">{item.name}</span>
+                                    </div>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
                           </CardContent>
-
-                          <CardFooter></CardFooter>
                         </Card>
                       </CarouselItem>
                     ))}

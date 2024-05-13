@@ -1,2 +1,65 @@
 @layer utilities {
+  .python {
+    color: hsl(var(--python));
+  }
+  .javascript {
+    color: hsl(var(--javascript));
+  }
+  .typescript {
+    color: hsl(var(--typescript));
+  }
+  .html {
+    color: hsl(var(--html));
+  }
+  .css {
+    color: hsl(var(--css));
+  }
+  .sass {
+    color: hsl(var(--sass));
+  }
+
+  .django {
+    color: hsl(var(--django));
+  }
+  .django-rest-framework {
+    color: hsl(var(--django-rest-framework));
+  }
+  .postgresql {
+    color: hsl(var(--postgresql));
+  }
+
+  .react {
+    color: hsl(var(--react));
+  }
+  .next-js {
+    color: hsl(var(--next-js));
+  }
+  .redux-toolkit {
+    color: hsl(var(--redux-toolkit));
+  }
+  .tailwindcss {
+    color: hsl(var(--tailwindcss));
+  }
+  .shadcn-ui {
+    color: hsl(var(--shadcn-ui));
+  }
+  .framer-motion {
+    color: hsl(var(--framer-motion));
+  }
+  .react-hook-form {
+    color: hsl(var(--react-hook-form));
+  }
+  .zod {
+    color: hsl(var(--zod));
+  }
+
+  .git {
+    color: hsl(var(--git));
+  }
+  .github {
+    color: hsl(var(--github));
+  }
+  .docker {
+    color: hsl(var(--docker));
+  }
 }

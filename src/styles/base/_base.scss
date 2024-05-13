@@ -27,6 +27,23 @@
     --html: 13, 77%, 52%;
     --css: 205, 79%, 40%;
     --sass: 330, 50%, 60%;
+
+    --django: 157, 67%, 11%;
+    --django-rest-framework: 157, 67%, 11%;
+    --postgresql: 225, 73%, 57%;
+
+    --react: 193, 95%, 68%;
+    --next-js: 0, 0%, 0%;
+    --framer-motion: 220, 100%, 50%;
+    --redux-toolkit: 263, 46%, 51%;
+    --shadcn-ui: 0, 0%, 0%;
+    --tailwindcss: 189, 94%, 43%;
+    --react-hook-form: 338, 79%, 64%;
+    --zod: 219, 48%, 47%;
+
+    --git: 9, 86%, 57%;
+    --github: 0, 0%, 0%;
+    --docker: 206, 85%, 54%;
   }
 
   .dark {
@@ -56,6 +73,23 @@
     --html: 13, 77%, 52%;
     --css: 205, 79%, 40%;
     --sass: 330, 50%, 60%;
+
+    --django: 157, 67%, 11%;
+    --django-rest-framework: 157, 67%, 11%;
+    --postgresql: 225, 73%, 57%;
+
+    --react: 193, 95%, 68%;
+    --next-js: 0, 0%, 100%;
+    --framer-motion: 220, 100%, 50%;
+    --redux-toolkit: 263, 46%, 51%;
+    --shadcn-ui: 0, 0%, 100%;
+    --tailwindcss: 189, 94%, 43%;
+    --react-hook-form: 338, 79%, 64%;
+    --zod: 219, 48%, 47%;
+
+    --git: 9, 86%, 57%;
+    --github: 0, 0%, 100%;
+    --docker: 206, 85%, 54%;
   }
 }
 
@@ -63,6 +97,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
