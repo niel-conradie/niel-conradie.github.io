@@ -21,9 +21,18 @@ import {
 import { TbBrandFramerMotion } from "react-icons/tb";
 
 export const categories = [
-  { name: "Technology", value: "technology" },
-  { name: "Qualification", value: "qualification" },
-  { name: "Experience", value: "experience" },
+  {
+    name: "Technology",
+    value: "technology",
+  },
+  {
+    name: "Qualification",
+    value: "qualification",
+  },
+  {
+    name: "Experience",
+    value: "experience",
+  },
 ];
 
 export const technologies = [
@@ -161,46 +170,46 @@ export const technologies = [
 
 export const qualifications = [
   {
-    title: "Back-End Developer Professional Certificate",
+    name: "Back-End Developer Professional Certificate",
     location: "Meta",
-    src: "./certificates/1.jpg",
-    href: "#",
+    image: "./certificates/1.jpg",
+    link: "#",
   },
   {
-    title: "Front-End Developer Professional Certificate",
+    name: "Front-End Developer Professional Certificate",
     location: "Meta",
-    src: "./certificates/1.jpg",
-    href: "#",
+    image: "./certificates/1.jpg",
+    link: "#",
   },
   {
-    title: "Web Design for Everybody Specialization",
+    name: "Web Design for Everybody Specialization",
     location: "University of Michigan",
-    src: "./certificates/1.jpg",
-    href: "#",
+    image: "./certificates/1.jpg",
+    link: "#",
   },
   {
-    title: "PostgreSQL for Everybody Specialization",
+    name: "PostgreSQL for Everybody Specialization",
     location: "University of Michigan",
-    src: "./certificates/1.jpg",
-    href: "#",
+    image: "./certificates/1.jpg",
+    link: "#",
   },
   {
-    title: "Django for Everybody Specialization",
+    name: "Django for Everybody Specialization",
     location: "University of Michigan",
-    src: "./certificates/1.jpg",
-    href: "#",
+    image: "./certificates/1.jpg",
+    link: "#",
   },
   {
-    title: "Python 3 Programming Specialization",
+    name: "Python 3 Programming Specialization",
     location: "University of Michigan",
-    src: "./certificates/1.jpg",
-    href: "#",
+    image: "./certificates/1.jpg",
+    link: "#",
   },
   {
-    title: "Python for Everybody Specialization",
+    name: "Python for Everybody Specialization",
     location: "University of Michigan",
-    src: "./certificates/1.jpg",
-    href: "#",
+    image: "./certificates/1.jpg",
+    link: "#",
   },
 ];
 
@@ -210,31 +219,31 @@ export const experiences = [
     start: 2022,
     end: "Present",
     role: "Fullstack",
-    src: "./company/1.jpg",
-    href: "#",
+    image: "./company/1.jpg",
+    link: "#",
   },
   {
     company: "Company Name",
     start: 2021,
     end: 2022,
     role: "Frontend",
-    src: "./company/1.jpg",
-    href: "#",
+    image: "./company/1.jpg",
+    link: "#",
   },
   {
     company: "Company Name",
     start: 2020,
     end: 2021,
     role: "Backend",
-    src: "./company/1.jpg",
-    href: "#",
+    image: "./company/1.jpg",
+    link: "#",
   },
   {
     company: "Company Name",
     start: 2019,
     end: 2020,
     role: "Backend",
-    src: "./company/1.jpg",
-    href: "#",
+    image: "./company/1.jpg",
+    link: "#",
   },
 ];

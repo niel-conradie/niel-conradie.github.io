@@ -119,7 +119,7 @@ export default function ProjectsPage() {
                             src={project.image}
                             alt={project.title}
                             width={500}
-                            height={282}
+                            height={300}
                           />
                         </motion.div>
                       </CardContent>
@@ -140,18 +140,20 @@ export default function ProjectsPage() {
                             </DialogTrigger>
                             <DialogContent className="h-[23.4375rem] w-80">
                               <DialogHeader>
-                                <DialogTitle className="mb-10 mt-5 select-none text-center">
+                                <DialogTitle className="mb-6 mt-5 select-none text-center">
                                   Technology Stack
                                 </DialogTitle>
                                 <div className="flex flex-wrap items-center justify-center gap-2">
-                                  {project.tags.map((tag, index) => (
+                                  {project.stack.map((item, index) => (
                                     <Badge key={index} variant="outline">
                                       <div className="flex items-center justify-center gap-x-2">
-                                        <span className="text-sm">
-                                          {tag.icon}
+                                        <span
+                                          className={`text-sm ${item.class}`}
+                                        >
+                                          {item.icon}
                                         </span>
                                         <span className="select-none tracking-wider">
-                                          {tag.name}
+                                          {item.name}
                                         </span>
                                       </div>
                                     </Badge>

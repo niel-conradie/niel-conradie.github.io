@@ -128,7 +128,7 @@ export default function AboutPage() {
                                       <span className={`text-lg ${item.class}`}>
                                         {item.icon}
                                       </span>
-                                      <span className="">{item.name}</span>
+                                      <span>{item.name}</span>
                                     </div>
                                   </li>
                                 ))}
@@ -169,7 +169,7 @@ export default function AboutPage() {
                         <Card className="h-[22.8125rem] cursor-grab sm:h-[23.4375rem] xl:h-[24.6875rem]">
                           <CardHeader>
                             <CardTitle className="select-none text-center text-base tracking-wider sm:text-lg">
-                              {qualification.title}
+                              {qualification.name}
                             </CardTitle>
 
                             <CardDescription className="select-none text-center text-sm tracking-wider sm:text-base">
@@ -190,8 +190,8 @@ export default function AboutPage() {
                             >
                               <Image
                                 className="select-none rounded-lg"
-                                src={qualification.src}
-                                alt={qualification.title}
+                                src={qualification.image}
+                                alt={qualification.name}
                                 width={300}
                                 height={200}
                               />
@@ -206,7 +206,7 @@ export default function AboutPage() {
                                 aria-label="Certificate"
                                 asChild
                               >
-                                <Link href={qualification.href} target="_blank">
+                                <Link href={qualification.link} target="_blank">
                                   <span className="select-none tracking-wider">
                                     Certificate
                                   </span>
@@ -272,7 +272,7 @@ export default function AboutPage() {
                             >
                               <Image
                                 className="select-none rounded-lg"
-                                src={experience.src}
+                                src={experience.image}
                                 alt={experience.company}
                                 width={300}
                                 height={200}
@@ -288,7 +288,7 @@ export default function AboutPage() {
                                 aria-label="Contact"
                                 asChild
                               >
-                                <Link href={experience.href} target="_blank">
+                                <Link href={experience.link} target="_blank">
                                   <span className="select-none tracking-wider">
                                     Contact
                                   </span>

@@ -1,6 +1,15 @@
-import { BiLogoDjango } from "react-icons/bi";
-import { RiNextjsLine } from "react-icons/ri";
-import { SiShadcnui } from "react-icons/si";
+import {
+  SiDjango,
+  SiDocker,
+  SiNextdotjs,
+  SiPostgresql,
+  SiReact,
+  SiReacthookform,
+  SiRedux,
+  SiShadcnui,
+  SiTailwindcss,
+  SiZod,
+} from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 
 export const projects = [
@@ -10,11 +19,57 @@ export const projects = [
     image: "./projects/1.jpg",
     source: "#",
     preview: "#",
-    tags: [
-      { name: "Django", icon: <BiLogoDjango /> },
-      { name: "Framer Motion", icon: <TbBrandFramerMotion /> },
-      { name: "Next.js", icon: <RiNextjsLine /> },
-      { name: "Shadcn/ui", icon: <SiShadcnui /> },
+    stack: [
+      {
+        name: "Django",
+        icon: <SiDjango />,
+        class: "django",
+      },
+      {
+        name: "Next.js",
+        icon: <SiNextdotjs />,
+        class: "next-js",
+      },
+      {
+        name: "Redux Toolkit",
+        icon: <SiRedux />,
+        class: "redux-toolkit",
+      },
+      {
+        name: "Tailwindcss",
+        icon: <SiTailwindcss />,
+        class: "tailwindcss",
+      },
+      {
+        name: "Shadcn/ui",
+        icon: <SiShadcnui />,
+        class: "shadcn-ui",
+      },
+      {
+        name: "Framer Motion",
+        icon: <TbBrandFramerMotion />,
+        class: "framer-motion",
+      },
+      {
+        name: "React Hook Form",
+        icon: <SiReacthookform />,
+        class: "react-hook-form",
+      },
+      {
+        name: "Zod",
+        icon: <SiZod />,
+        class: "zod",
+      },
+      {
+        name: "Docker",
+        icon: <SiDocker />,
+        class: "docker",
+      },
+      {
+        name: "PostgreSQL",
+        icon: <SiPostgresql />,
+        class: "postgresql",
+      },
     ],
   },
   {
@@ -23,11 +78,57 @@ export const projects = [
     image: "./projects/2.jpg",
     source: "#",
     preview: "#",
-    tags: [
-      { name: "Django", icon: <BiLogoDjango /> },
-      { name: "Framer Motion", icon: <TbBrandFramerMotion /> },
-      { name: "Next.js", icon: <RiNextjsLine /> },
-      { name: "Shadcn/ui", icon: <SiShadcnui /> },
+    stack: [
+      {
+        name: "Django",
+        icon: <SiDjango />,
+        class: "django",
+      },
+      {
+        name: "Next.js",
+        icon: <SiNextdotjs />,
+        class: "next-js",
+      },
+      {
+        name: "Redux Toolkit",
+        icon: <SiRedux />,
+        class: "redux-toolkit",
+      },
+      {
+        name: "Tailwindcss",
+        icon: <SiTailwindcss />,
+        class: "tailwindcss",
+      },
+      {
+        name: "Shadcn/ui",
+        icon: <SiShadcnui />,
+        class: "shadcn-ui",
+      },
+      {
+        name: "Framer Motion",
+        icon: <TbBrandFramerMotion />,
+        class: "framer-motion",
+      },
+      {
+        name: "React Hook Form",
+        icon: <SiReacthookform />,
+        class: "react-hook-form",
+      },
+      {
+        name: "Zod",
+        icon: <SiZod />,
+        class: "zod",
+      },
+      {
+        name: "Docker",
+        icon: <SiDocker />,
+        class: "docker",
+      },
+      {
+        name: "PostgreSQL",
+        icon: <SiPostgresql />,
+        class: "postgresql",
+      },
     ],
   },
   {
@@ -36,10 +137,52 @@ export const projects = [
     image: "./projects/3.jpg",
     source: "#",
     preview: "#",
-    tags: [
-      { name: "Framer Motion", icon: <TbBrandFramerMotion /> },
-      { name: "Next.js", icon: <RiNextjsLine /> },
-      { name: "Shadcn/ui", icon: <SiShadcnui /> },
+    stack: [
+      {
+        name: "Next.js",
+        icon: <SiNextdotjs />,
+        class: "next-js",
+      },
+      {
+        name: "Redux Toolkit",
+        icon: <SiRedux />,
+        class: "redux-toolkit",
+      },
+      {
+        name: "Tailwindcss",
+        icon: <SiTailwindcss />,
+        class: "tailwindcss",
+      },
+      {
+        name: "Shadcn/ui",
+        icon: <SiShadcnui />,
+        class: "shadcn-ui",
+      },
+      {
+        name: "Framer Motion",
+        icon: <TbBrandFramerMotion />,
+        class: "framer-motion",
+      },
+      {
+        name: "React Hook Form",
+        icon: <SiReacthookform />,
+        class: "react-hook-form",
+      },
+      {
+        name: "Zod",
+        icon: <SiZod />,
+        class: "zod",
+      },
+      {
+        name: "Docker",
+        icon: <SiDocker />,
+        class: "docker",
+      },
+      {
+        name: "PostgreSQL",
+        icon: <SiPostgresql />,
+        class: "postgresql",
+      },
     ],
   },
   {
@@ -48,6 +191,27 @@ export const projects = [
     source: "#",
     preview: "#",
     image: "./projects/4.jpg",
-    tags: [{ name: "Django", icon: <BiLogoDjango /> }],
+    stack: [
+      {
+        name: "Django",
+        icon: <SiDjango />,
+        class: "django",
+      },
+      {
+        name: "Tailwindcss",
+        icon: <SiTailwindcss />,
+        class: "tailwindcss",
+      },
+      {
+        name: "Docker",
+        icon: <SiDocker />,
+        class: "docker",
+      },
+      {
+        name: "PostgreSQL",
+        icon: <SiPostgresql />,
+        class: "postgresql",
+      },
+    ],
   },
 ];
