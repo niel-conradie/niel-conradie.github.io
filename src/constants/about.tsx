@@ -163,45 +163,78 @@ export const qualifications = [
   {
     title: "Back-End Developer Professional Certificate",
     location: "Meta",
-    image: "./certificates/1.jpg",
+    src: "./certificates/1.jpg",
     href: "#",
   },
   {
     title: "Front-End Developer Professional Certificate",
     location: "Meta",
-    image: "./certificates/1.jpg",
+    src: "./certificates/1.jpg",
     href: "#",
   },
   {
     title: "Web Design for Everybody Specialization",
     location: "University of Michigan",
-    image: "./certificates/1.jpg",
+    src: "./certificates/1.jpg",
     href: "#",
   },
   {
     title: "PostgreSQL for Everybody Specialization",
     location: "University of Michigan",
-    image: "./certificates/1.jpg",
+    src: "./certificates/1.jpg",
     href: "#",
   },
   {
     title: "Django for Everybody Specialization",
     location: "University of Michigan",
-    image: "./certificates/1.jpg",
+    src: "./certificates/1.jpg",
     href: "#",
   },
   {
     title: "Python 3 Programming Specialization",
     location: "University of Michigan",
-    image: "./certificates/1.jpg",
+    src: "./certificates/1.jpg",
     href: "#",
   },
   {
     title: "Python for Everybody Specialization",
     location: "University of Michigan",
-    image: "./certificates/1.jpg",
+    src: "./certificates/1.jpg",
     href: "#",
   },
 ];
 
-export const experiences = [];
+export const experiences = [
+  {
+    company: "Company Name",
+    start: 2022,
+    end: "Present",
+    role: "Fullstack",
+    src: "./company/1.jpg",
+    href: "#",
+  },
+  {
+    company: "Company Name",
+    start: 2021,
+    end: 2022,
+    role: "Frontend",
+    src: "./company/1.jpg",
+    href: "#",
+  },
+  {
+    company: "Company Name",
+    start: 2020,
+    end: 2021,
+    role: "Backend",
+    src: "./company/1.jpg",
+    href: "#",
+  },
+  {
+    company: "Company Name",
+    start: 2019,
+    end: 2020,
+    role: "Backend",
+    src: "./company/1.jpg",
+    href: "#",
+  },
+];

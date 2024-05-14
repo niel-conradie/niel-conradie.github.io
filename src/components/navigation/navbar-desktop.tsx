@@ -23,7 +23,7 @@ export default function NavbarDesktop() {
             >
               <Link className="relative" href={link.href}>
                 <span
-                  className={`text-sm tracking-wider after:absolute after:bottom-2 after:left-[12.5%] after:block after:h-[1px] after:bg-primary after:text-center after:transition-all after:duration-1000 ${pathname === link.href ? "after:w-[75%]" : "after:w-0"}`}
+                  className={`select-none text-sm tracking-wider after:absolute after:bottom-2 after:left-[12.5%] after:block after:h-[1px] after:bg-primary after:text-center after:transition-all after:duration-1000 ${pathname === link.href ? "after:w-[75%]" : "after:w-0"}`}
                 >
                   {link.name}
                 </span>

@@ -190,10 +190,10 @@ export default function AboutPage() {
                             >
                               <Image
                                 className="select-none rounded-lg"
-                                src={qualification.image}
+                                src={qualification.src}
                                 alt={qualification.title}
-                                width={500}
-                                height={500}
+                                width={300}
+                                height={200}
                               />
                             </motion.div>
                           </CardContent>
@@ -240,17 +240,62 @@ export default function AboutPage() {
                   onMouseLeave={plugin.current.reset}
                 >
                   <CarouselContent>
-                    {Array.from({ length: 5 }).map((_, index) => (
+                    {experiences.map((experience, index) => (
                       <CarouselItem
                         key={index}
                         className="sm:basis-1/2 xl:basis-1/3"
                       >
                         <Card className="h-[22.8125rem] cursor-grab sm:h-[23.4375rem] xl:h-[24.6875rem]">
-                          <CardHeader></CardHeader>
-                          <CardContent className="">
-                            <span className="">{index + 1}</span>
+                          <CardHeader>
+                            <CardTitle className="select-none text-center text-base tracking-wider sm:text-lg">
+                              {experience.company}
+                            </CardTitle>
+
+                            <CardDescription className="flex select-none flex-col text-center text-sm tracking-wider sm:text-base">
+                              <span>{experience.role}</span>
+                              <span>
+                                {experience.start} - {experience.end}
+                              </span>
+                            </CardDescription>
+                          </CardHeader>
+
+                          <CardContent>
+                            <motion.div
+                              variants={fade({
+                                direction: "up",
+                                distance: 0,
+                                duration: 0.75,
+                                delay: 0,
+                              })}
+                              initial="hidden"
+                              animate="show"
+                            >
+                              <Image
+                                className="select-none rounded-lg"
+                                src={experience.src}
+                                alt={experience.company}
+                                width={300}
+                                height={200}
+                              />
+                            </motion.div>
                           </CardContent>
-                          <CardFooter></CardFooter>
+
+                          <CardFooter>
+                            <div className="mt-1 flex h-full w-full items-center justify-center">
+                              <Button
+                                className="w-full transition-all duration-300 hover:text-primary"
+                                variant="outline"
+                                aria-label="Contact"
+                                asChild
+                              >
+                                <Link href={experience.href} target="_blank">
+                                  <span className="select-none tracking-wider">
+                                    Contact
+                                  </span>
+                                </Link>
+                              </Button>
+                            </div>
+                          </CardFooter>
                         </Card>
                       </CarouselItem>
                     ))}
