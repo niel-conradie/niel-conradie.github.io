@@ -58,6 +58,18 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
+          <video
+            id="bg-video"
+            className="fixed left-0 top-0 -z-50 min-h-screen w-full object-cover"
+            poster="./images/fallback-image.png"
+            preload="auto"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="./videos/bg-universe.mp4" type="video/mp4" />
+          </video>
           {children}
         </ThemeProvider>
       </body>

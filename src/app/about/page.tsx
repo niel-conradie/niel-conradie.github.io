@@ -77,10 +77,10 @@ export default function AboutPage() {
 
           <div>
             <Tabs
-              className="w-80 sm:w-[40rem] xl:w-[68.75rem]"
+              className="w-80 sm:w-[40rem] xl:w-[68.75rem] "
               defaultValue="technology"
             >
-              <TabsList className="grid grid-cols-3 ">
+              <TabsList className="grid grid-cols-3 border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
                 {categories.map((category, index) => (
                   <TabsTrigger
                     key={index}
@@ -112,7 +112,7 @@ export default function AboutPage() {
                         key={index}
                         className="sm:basis-1/2 xl:basis-1/3"
                       >
-                        <Card className="h-[22.8125rem] cursor-grab sm:h-[23.4375rem] xl:h-[24.6875rem]">
+                        <Card className="h-[22.8125rem] cursor-grab bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sm:h-[23.4375rem] xl:h-[24.6875rem]">
                           <CardHeader>
                             <CardTitle className="select-none text-center text-base tracking-wider sm:text-lg">
                               {technology.title}
@@ -166,7 +166,7 @@ export default function AboutPage() {
                         key={index}
                         className="sm:basis-1/2 xl:basis-1/3"
                       >
-                        <Card className="h-[22.8125rem] cursor-grab sm:h-[23.4375rem] xl:h-[24.6875rem]">
+                        <Card className="h-[22.8125rem] cursor-grab bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sm:h-[23.4375rem] xl:h-[24.6875rem]">
                           <CardHeader>
                             <CardTitle className="select-none text-center text-base tracking-wider sm:text-lg">
                               {qualification.name}
@@ -245,7 +245,7 @@ export default function AboutPage() {
                         key={index}
                         className="sm:basis-1/2 xl:basis-1/3"
                       >
-                        <Card className="h-[22.8125rem] cursor-grab sm:h-[23.4375rem] xl:h-[24.6875rem]">
+                        <Card className="h-[22.8125rem] cursor-grab bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sm:h-[23.4375rem] xl:h-[24.6875rem]">
                           <CardHeader>
                             <CardTitle className="select-none text-center text-base tracking-wider sm:text-lg">
                               {experience.company}
