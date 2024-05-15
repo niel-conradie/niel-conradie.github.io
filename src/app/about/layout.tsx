@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   description: "About Page",
 };
 
-interface AboutLayoutProps {
+interface Props {
   children: React.ReactNode;
 }
 
-export default function AboutLayout({ children }: AboutLayoutProps) {
+export default function AboutLayout({ children }: Props) {
   return <>{children}</>;
 }

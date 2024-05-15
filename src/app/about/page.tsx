@@ -80,7 +80,7 @@ export default function AboutPage() {
               className="w-80 sm:w-[40rem] xl:w-[68.75rem] "
               defaultValue="technology"
             >
-              <TabsList className="grid grid-cols-3 border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+              <TabsList className="grid grid-cols-3">
                 {categories.map((category, index) => (
                   <TabsTrigger
                     key={index}

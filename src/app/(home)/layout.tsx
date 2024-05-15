@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   description: "Home Page",
 };
 
-interface HomeLayoutProps {
+interface Props {
   children: React.ReactNode;
 }
 
-export default function HomeLayout({ children }: HomeLayoutProps) {
+export default function HomeLayout({ children }: Props) {
   return <>{children}</>;
 }

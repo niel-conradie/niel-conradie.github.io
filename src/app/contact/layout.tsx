@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   description: "Contact Page",
 };
 
-interface ContactLayoutProps {
+interface Props {
   children: React.ReactNode;
 }
 
-export default function ContactLayout({ children }: ContactLayoutProps) {
+export default function ContactLayout({ children }: Props) {
   return <>{children}</>;
 }
