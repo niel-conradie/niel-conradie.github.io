@@ -1,14 +1,15 @@
 "use client";
 
-// react.js
 import { useCallback, useEffect, useState } from "react";
 
-// @tsparticles/react
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 // import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
+import { motion } from "framer-motion";
+
+import { fade } from "@/utils";
 
 export default function ParticlesContainer() {
   const [init, setInit] = useState(false);
@@ -104,12 +105,23 @@ export default function ParticlesContainer() {
 
   return (
     init && (
-      <Particles
-        id="tsparticles"
-        className="-z-50"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
+      <motion.div
+        variants={fade({
+          direction: "up",
+          distance: 0,
+          duration: 0.5,
+          delay: 1.75,
+        })}
+        initial="hidden"
+        animate="show"
+      >
+        <Particles
+          id="tsparticles"
+          className="-z-50"
+          particlesLoaded={particlesLoaded}
+          options={options}
+        />
+      </motion.div>
     )
   );
 }

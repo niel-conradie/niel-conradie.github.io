@@ -84,7 +84,7 @@ export default function AboutPage() {
                 {categories.map((category, index) => (
                   <TabsTrigger
                     key={index}
-                    className="transition-all duration-300 first:rounded-none first:border-r last:rounded-none last:border-l hover:!text-primary"
+                    className="transition-all duration-300 hover:!text-primary"
                     value={category.value}
                   >
                     <span className="select-none tracking-wider">
