@@ -6,3 +6,59 @@
 
 @import "tailwindcss/utilities";
 @import "utilities";
+
+.cube {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+
+  .face {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(
+      to right,
+      hsl(var(--background)),
+      hsl(var(--foreground))
+    );
+  }
+
+  .front {
+    transform: translateZ(75px);
+  }
+
+  .back {
+    transform: rotateY(180deg) translateZ(75px);
+  }
+
+  .left {
+    transform: rotateY(-90deg) translateZ(75px);
+  }
+
+  .right {
+    transform: rotateY(90deg) translateZ(75px);
+  }
+
+  .top {
+    transform: rotateX(90deg) translateZ(75px);
+  }
+
+  .bottom {
+    transform: rotateX(-90deg) translateZ(75px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.cube {
+  animation: rotate 20s linear infinite;
+}

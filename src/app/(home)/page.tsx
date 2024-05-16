@@ -6,6 +6,7 @@ import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
 
+import { Cube } from "@/components/home";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -26,7 +27,7 @@ const container = {
     transition: {
       when: "beforeChildren",
       staggerChildren: 0.0125,
-      delayChildren: 0.25,
+      delayChildren: 2.25,
     },
   },
 };
@@ -81,7 +82,7 @@ export default function HomePage() {
 
             <div className="flex items-center justify-center px-4 sm:px-0">
               <motion.p
-                className="select-none text-center tracking-wider sm:w-[34/375rem]"
+                className="max-w-[600px] select-none text-center tracking-wider sm:w-[34/375rem]"
                 variants={container}
                 initial="hidden"
                 animate="show"
@@ -98,13 +99,13 @@ export default function HomePage() {
               </motion.p>
             </div>
 
-            <div className="mt-6 flex items-center justify-center gap-x-6">
+            <div className="my-6 hidden items-center justify-center gap-x-6 sm:flex">
               <motion.div
                 variants={fade({
                   direction: "right",
                   distance: 25,
                   duration: 1,
-                  delay: 3.5,
+                  delay: 5,
                 })}
                 initial="hidden"
                 animate="show"
@@ -126,7 +127,7 @@ export default function HomePage() {
                   direction: "left",
                   distance: 25,
                   duration: 1,
-                  delay: 3.5,
+                  delay: 5,
                 })}
                 initial="hidden"
                 animate="show"
@@ -145,8 +146,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="flex items-center justify-center xl:w-1/2">
-            <Logo />
+          <div className="mt-14 flex items-center justify-center xl:w-1/2">
+            <Cube />
           </div>
         </div>
       </LoaderProvider>

@@ -1,5 +1,7 @@
 export const title = [
+  "Software Engineer",
   "Software Developer",
+  "Web Developer",
   "Backend Developer",
   "Frontend Developer",
   "Fullstack Developer",
