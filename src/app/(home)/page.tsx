@@ -6,14 +6,13 @@ import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
 
-import { Cube } from "@/components/home";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { LoaderProvider } from "@/components/utils";
+import { Cube, LoaderProvider } from "@/components/utils";
 
 import { fade } from "@/utils";
 
