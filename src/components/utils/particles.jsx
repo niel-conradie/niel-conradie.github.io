@@ -7,9 +7,6 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
-import { motion } from "framer-motion";
-
-import { fade } from "@/utils";
 
 export default function ParticlesContainer() {
   const [init, setInit] = useState(false);
@@ -105,23 +102,12 @@ export default function ParticlesContainer() {
 
   return (
     init && (
-      <motion.div
-        variants={fade({
-          direction: "up",
-          distance: 0,
-          duration: 0.5,
-          delay: 1.75,
-        })}
-        initial="hidden"
-        animate="show"
-      >
-        <Particles
-          id="tsparticles"
-          className="-z-50"
-          particlesLoaded={particlesLoaded}
-          options={options}
-        />
-      </motion.div>
+      <Particles
+        id="tsparticles"
+        className="-z-50"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
     )
   );
 }
