@@ -77,14 +77,14 @@ export default function AboutPage() {
 
           <div>
             <Tabs
-              className="w-80 sm:w-[40rem] xl:w-[68.75rem] "
+              className="w-80 sm:w-[40rem] xl:w-[68.75rem]"
               defaultValue="technology"
             >
-              <TabsList className="grid grid-cols-3">
+              <TabsList className="grid grid-cols-3 border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
                 {categories.map((category, index) => (
                   <TabsTrigger
                     key={index}
-                    className="transition-all duration-300 hover:!text-primary"
+                    className="transition-all duration-300 first:rounded-none first:border-r last:rounded-none last:border-l hover:!text-primary"
                     value={category.value}
                   >
                     <span className="select-none tracking-wider">

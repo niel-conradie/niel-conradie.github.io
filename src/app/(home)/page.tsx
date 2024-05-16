@@ -82,7 +82,7 @@ export default function HomePage() {
                   direction: "right",
                   distance: 25,
                   duration: 1,
-                  delay: 3,
+                  delay: 2.5,
                 })}
                 initial="hidden"
                 animate="show"
@@ -104,7 +104,7 @@ export default function HomePage() {
                   direction: "left",
                   distance: 25,
                   duration: 1,
-                  delay: 3,
+                  delay: 2.5,
                 })}
                 initial="hidden"
                 animate="show"
@@ -128,8 +128,8 @@ export default function HomePage() {
             variants={fade({
               direction: "up",
               distance: 0,
-              duration: 0.75,
-              delay: 2.25,
+              duration: 0,
+              delay: 3,
             })}
             initial="hidden"
             animate="show"

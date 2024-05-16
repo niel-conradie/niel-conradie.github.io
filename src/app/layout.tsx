@@ -4,6 +4,7 @@ import { Inter as FontSans } from "next/font/google";
 
 import { Header } from "@/components/navigation";
 import { ThemeProvider } from "@/components/theme/";
+import { Particles } from "@/components/utils";
 
 import { cn } from "@/lib/utils";
 
@@ -58,6 +59,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
+          <Particles />
           {children}
         </ThemeProvider>
       </body>

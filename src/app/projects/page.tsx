@@ -92,7 +92,7 @@ export default function ProjectsPage() {
               <CarouselContent>
                 {projects.map((project, index) => (
                   <CarouselItem key={index} className="xl:basis-1/3">
-                    <Card className="h-fit cursor-grab">
+                    <Card className="h-fit cursor-grab bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
                       <CardHeader>
                         <CardTitle className="select-none text-center text-base tracking-wider sm:text-lg">
                           {project.title}
