@@ -13,34 +13,14 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { LoaderProvider, Logo } from "@/components/utils";
+import { LoaderProvider } from "@/components/utils";
 
 import { fade } from "@/utils";
 
 import { description, title } from "@/constants/home";
 
-// TODO: Make StaggerChildren Function
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      when: "beforeChildren",
-      staggerChildren: 0.0125,
-      delayChildren: 2.25,
-    },
-  },
-};
-
-const containerItem = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 0.75 } },
-};
-
 export default function HomePage() {
   const plugin = useRef(Autoplay({ delay: 7500 }));
-
-  const _description = description.split("");
 
   return (
     <main className="flex min-h-[calc(100dvh)] items-center justify-center px-4 py-[3.125rem] sm:pb-4 sm:pt-[3.125rem]">
@@ -80,24 +60,21 @@ export default function HomePage() {
               </Carousel>
             </motion.div>
 
-            <div className="flex items-center justify-center px-4 sm:px-0">
-              <motion.p
-                className="max-w-[600px] select-none text-center tracking-wider sm:w-[34/375rem]"
-                variants={container}
-                initial="hidden"
-                animate="show"
-              >
-                {_description.map((item, index) => (
-                  <motion.span
-                    key={index}
-                    className="mx-[0.0125em]"
-                    variants={containerItem}
-                  >
-                    {item}
-                  </motion.span>
-                ))}
-              </motion.p>
-            </div>
+            <motion.div
+              className="flex items-center justify-center px-4 sm:px-0"
+              variants={fade({
+                direction: "up",
+                distance: 25,
+                duration: 1,
+                delay: 2,
+              })}
+              initial="hidden"
+              animate="show"
+            >
+              <p className="max-w-[34.375rem] select-none text-center tracking-wider">
+                {description}
+              </p>
+            </motion.div>
 
             <div className="my-6 hidden items-center justify-center gap-x-6 sm:flex">
               <motion.div
@@ -105,7 +82,7 @@ export default function HomePage() {
                   direction: "right",
                   distance: 25,
                   duration: 1,
-                  delay: 5,
+                  delay: 3,
                 })}
                 initial="hidden"
                 animate="show"
@@ -127,7 +104,7 @@ export default function HomePage() {
                   direction: "left",
                   distance: 25,
                   duration: 1,
-                  delay: 5,
+                  delay: 3,
                 })}
                 initial="hidden"
                 animate="show"
@@ -146,9 +123,19 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-14 flex items-center justify-center xl:w-1/2">
+          <motion.div
+            className="mt-16 flex items-center justify-center sm:mt-20 xl:mt-0 xl:w-1/2"
+            variants={fade({
+              direction: "up",
+              distance: 0,
+              duration: 0.75,
+              delay: 2.25,
+            })}
+            initial="hidden"
+            animate="show"
+          >
             <Cube />
-          </div>
+          </motion.div>
         </div>
       </LoaderProvider>
     </main>
