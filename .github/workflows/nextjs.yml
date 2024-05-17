@@ -78,7 +78,7 @@ jobs:
         env:
           EMAILJS_SERVICE_KEY: ${{ secrets.EMAILJS_SERVICE_KEY }}
           EMAILJS_TEMPLATE_KEY: ${{ secrets.EMAILJS_TEMPLATE_KEY }}
-          EMAILJS_USER_KEY: ${{ secrets.EMAILJS_USER_KEY }}
+          EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
