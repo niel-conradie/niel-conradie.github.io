@@ -87,7 +87,7 @@ export default function ParticlesContainer() {
           enable: true,
           area: 800,
         },
-        value: 80,
+        value: 75,
       },
       opacity: {
         value: 0.5,
@@ -101,7 +101,7 @@ export default function ParticlesContainer() {
     },
     detectRetina: true,
   };
-  
+
   return (
     init && (
       <Particles

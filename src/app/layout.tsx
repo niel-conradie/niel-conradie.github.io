@@ -60,7 +60,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <Particles />
+          <div className="hidden sm:block">
+            <Particles />
+          </div>
           {children}
         </ThemeProvider>
       </body>
