@@ -10,7 +10,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-import { socials } from "@/constants";
+import { socials } from "@/data";
 
 export default function Socials() {
   return (

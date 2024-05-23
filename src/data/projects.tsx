@@ -16,7 +16,7 @@ export const projects = [
   {
     title: "Project 1",
     description: "Django & Next.js Task Manager Application",
-    image: "./projects/1.jpg",
+    image: "/projects/1.jpg",
     source: "#",
     preview: "#",
     stack: [
@@ -75,7 +75,7 @@ export const projects = [
   {
     title: "Project 2",
     description: "Django & Next.js Blogging Application",
-    image: "./projects/2.jpg",
+    image: "/projects/2.jpg",
     source: "#",
     preview: "#",
     stack: [
@@ -134,7 +134,7 @@ export const projects = [
   {
     title: "Project 3",
     description: "Fullstack Next.js Music Player Application",
-    image: "./projects/3.jpg",
+    image: "/projects/3.jpg",
     source: "#",
     preview: "#",
     stack: [
@@ -190,7 +190,7 @@ export const projects = [
     description: "Fullstack Django Image Uploader Application",
     source: "#",
     preview: "#",
-    image: "./projects/4.jpg",
+    image: "/projects/4.jpg",
     stack: [
       {
         name: "Django",

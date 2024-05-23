@@ -4,16 +4,9 @@ import { Button } from "@/components/ui/button";
 
 export default function Logo() {
   return (
-    <Button
-      className="transition-all duration-300 hover:text-primary"
-      variant="ghost"
-      aria-label="Home"
-      asChild
-    >
+    <Button variant="ghost" aria-label="Home" asChild>
       <Link href="/">
-        <h1 className="select-none text-lg font-semibold tracking-wider">
-          Niel Conradie
-        </h1>
+        <h1 className="text-lg font-semibold">Niel Conradie</h1>
       </Link>
     </Button>
   );

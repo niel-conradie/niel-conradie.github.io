@@ -3,23 +3,21 @@ import "@/styles/globals.scss";
 import { Inter as FontSans } from "next/font/google";
 
 import { Header } from "@/components/navigation";
-import { ThemeProvider } from "@/components/theme/";
-import { Particles } from "@/components/utils";
+import { ThemeProvider } from "@/components/theme";
 
 import { cn } from "@/lib/utils";
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Niel Conradie | Portfolio",
-  description: "Portfolio Website",
-};
-
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
+
+export const metadata: Metadata = {
+  title: "Next.js Pages",
+  description: "Next.js GitHub Pages starter Template.",
+};
 
 export default function RootLayout({
   children,
@@ -28,41 +26,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <link
-        rel="shortcut icon"
-        href="/favicon/favicon.ico"
-        type="image/x-icon"
-      />
-      <link
-        rel="apple-touch-icon"
-        href="/favicon/apple-touch-icon.png"
-        sizes="180x180"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        href="/favicon/favicon-32x32.png"
-        sizes="32x32"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        href="/favicon/favicon-16x16.png"
-        sizes="16x16"
-      />
-      <link rel="manifest" href="/favicon/site.webmanifest" />
+      <head>
+        <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+      </head>
       <body
         className={cn("min-h-screen font-sans antialiased", fontSans.variable)}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
+          enableSystem
           disableTransitionOnChange
         >
           <Header />
-          <div className="hidden sm:block">
-            <Particles />
-          </div>
           {children}
         </ThemeProvider>
       </body>

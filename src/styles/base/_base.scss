@@ -2,71 +2,46 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
-    --primary: 141, 73%, 42%;
+    --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
     --radius: 0.5rem;
-
-    --python: 207, 51%, 44%;
-    --javascript: 53, 93%, 54%;
-    --typescript: 211, 60%, 48%;
-    --html: 13, 77%, 52%;
-    --css: 205, 79%, 40%;
-    --sass: 330, 50%, 60%;
-    --django: 157, 67%, 11%;
-    --django-rest-framework: 157, 67%, 11%;
-    --postgresql: 225, 73%, 57%;
-    --react: 193, 95%, 68%;
-    --next-js: 0, 0%, 0%;
-    --framer-motion: 220, 100%, 50%;
-    --redux-toolkit: 263, 46%, 51%;
-    --shadcn-ui: 0, 0%, 0%;
-    --tailwindcss: 189, 94%, 43%;
-    --react-hook-form: 338, 79%, 64%;
-    --zod: 219, 48%, 47%;
-    --git: 9, 86%, 57%;
-    --github: 0, 0%, 0%;
-    --docker: 206, 85%, 54%;
   }
 
   .dark {
-    --background: 0, 0%, 7%;
+    --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
-    --primary: 141, 73%, 42%;
+    --primary: 0 0% 98%;
     --primary-foreground: 0 0% 9%;
-    --secondary: 0, 0%, 13%;
+    --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
-    --accent: 0, 0%, 13%;
+    --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
-    --card: 0, 0%, 7%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0, 0%, 7%;
-    --popover-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0, 0%, 13%;
-    --input: 0, 0%, 13%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
-
-    --next-js: 0, 0%, 100%;
-    --shadcn-ui: 0, 0%, 100%;
-    --github: 0, 0%, 100%;
   }
 }
 
