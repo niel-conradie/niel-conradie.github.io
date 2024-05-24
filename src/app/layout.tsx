@@ -2,7 +2,6 @@ import "@/styles/globals.scss";
 
 import { Inter as FontSans } from "next/font/google";
 
-import { Header } from "@/components/navigation";
 import { ThemeProvider } from "@/components/theme";
 
 import { cn } from "@/lib/utils";
@@ -15,8 +14,8 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Pages",
-  description: "Next.js GitHub Pages starter Template.",
+  title: "Niel Conradie | GitHub",
+  description: "Niel Conradie GitHub Pages",
 };
 
 export default function RootLayout({
@@ -27,7 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+        <link
+          rel="shortcut icon"
+          href="/favicon/favicon.ico"
+          type="image/x-icon"
+        />
       </head>
       <body
         className={cn("min-h-screen font-sans antialiased", fontSans.variable)}
@@ -38,7 +41,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
           {children}
         </ThemeProvider>
       </body>

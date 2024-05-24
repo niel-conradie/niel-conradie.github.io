@@ -1,7 +1,17 @@
-export default function Home() {
+import { Hero } from "@/components/section";
+
+export default function LandingPage() {
   return (
-    <main className="flex min-h-[100dvh] items-center justify-center px-4 py-[3.125rem] sm:pb-4 sm:pt-[3.125rem]">
-      <h2>Hello World!</h2>
+    <main>
+      <section id="home">
+        <Hero />
+      </section>
+
+      <section id="projects">
+        <h3 className="text-center text-4xl">
+          Projects<span className="text-primary">.</span>
+        </h3>
+      </section>
     </main>
   );
 }
