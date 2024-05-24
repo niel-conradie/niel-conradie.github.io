@@ -2,6 +2,7 @@ import "@/styles/globals.scss";
 
 import { Inter as FontSans } from "next/font/google";
 
+import { Navbar } from "@/components/navigation";
 import { ThemeProvider } from "@/components/theme";
 
 import { cn } from "@/lib/utils";
@@ -41,6 +42,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>
