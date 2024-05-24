@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 import {
@@ -13,17 +12,16 @@ import {
 } from "framer-motion";
 
 export const HeroParallax = ({
-  products,
+  heroItems,
 }: {
-  products: {
+  heroItems: {
     title: string;
-    link: string;
     thumbnail: string;
   }[];
 }) => {
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
+  const firstRow = heroItems.slice(0, 5);
+  const secondRow = heroItems.slice(5, 10);
+  const thirdRow = heroItems.slice(10, 15);
 
   const ref = React.useRef(null);
 
@@ -77,33 +75,20 @@ export const HeroParallax = ({
           translateY,
           opacity,
         }}
-        className=""
       >
         <motion.div className="mb-20 flex flex-row-reverse space-x-20 space-x-reverse">
-          {firstRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
+          {firstRow.map((item) => (
+            <Card key={item.title} item={item} translate={translateX} />
           ))}
         </motion.div>
-        <motion.div className="mb-20 flex  flex-row space-x-20 ">
-          {secondRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateXReverse}
-              key={product.title}
-            />
+        <motion.div className="mb-20 flex flex-row space-x-20 ">
+          {secondRow.map((item) => (
+            <Card key={item.title} item={item} translate={translateXReverse} />
           ))}
         </motion.div>
         <motion.div className="flex flex-row-reverse space-x-20 space-x-reverse">
-          {thirdRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
+          {thirdRow.map((item) => (
+            <Card key={item.title} item={item} translate={translateX} />
           ))}
         </motion.div>
       </motion.div>
@@ -113,26 +98,25 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40">
-      <h1 className="text-2xl font-bold dark:text-white md:text-7xl">
+    <header className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4 py-20 md:py-40">
+      <h1 className="text-2xl font-bold md:text-7xl">
         The Ultimate <br /> development studio
       </h1>
-      <p className="mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
+      <p className="mt-8 max-w-2xl text-base md:text-xl">
         We build beautiful products with the latest technologies and frameworks.
         We are a team of passionate developers and designers that love to build
         amazing products.
       </p>
-    </div>
+    </header>
   );
 };
 
-export const ProductCard = ({
-  product,
+export const Card = ({
+  item,
   translate,
 }: {
-  product: {
+  item: {
     title: string;
-    link: string;
     thumbnail: string;
   };
   translate: MotionValue<number>;
@@ -145,24 +129,21 @@ export const ProductCard = ({
       whileHover={{
         y: -20,
       }}
-      key={product.title}
-      className="group/product relative h-96 w-[30rem] flex-shrink-0"
+      key={item.title}
+      className="group/item relative h-96 w-[30rem] flex-shrink-0"
     >
-      <Link
-        href={product.link}
-        className="block group-hover/product:shadow-2xl "
-      >
+      <div className="block group-hover/item:shadow-2xl ">
         <Image
-          src={product.thumbnail}
+          src={item.thumbnail}
           height="600"
           width="600"
           className="absolute inset-0 h-full w-full object-cover object-left-top"
-          alt={product.title}
+          alt={item.title}
         />
-      </Link>
-      <div className="pointer-events-none absolute inset-0 h-full w-full bg-black opacity-0 group-hover/product:opacity-80"></div>
-      <h2 className="absolute bottom-4 left-4 text-white opacity-0 group-hover/product:opacity-100">
-        {product.title}
+      </div>
+      <div className="pointer-events-none absolute inset-0 h-full w-full bg-background/95 opacity-0 backdrop-blur group-hover/item:opacity-80 supports-[backdrop-filter]:bg-background/60"></div>
+      <h2 className="absolute bottom-4 left-4 text-foreground opacity-0 group-hover/item:opacity-100">
+        {item.title}
       </h2>
     </motion.div>
   );
