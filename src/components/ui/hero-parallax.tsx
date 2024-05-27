@@ -11,6 +11,10 @@ import {
   useTransform,
 } from "framer-motion";
 
+import { HeroTitle } from "@/components/section/hero";
+
+import { fade } from "@/utils";
+
 export const HeroParallax = ({
   heroItems,
 }: {
@@ -99,13 +103,36 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <header className="text relative left-0 top-0 mx-auto w-full max-w-7xl px-4 py-20 md:py-40">
-      <h1 className="text-2xl font-bold md:text-7xl">Niel Conradie</h1>
-      <p className="mt-8 max-w-2xl text-base md:text-xl">
-        Explore my developer portfolio, a curated collection of projects
-        demonstrating technical expertise and problem-solving skills.{" "}
-        <br className="hidden sm:block" /> From web applications to software
-        solutions, explore examples of my work and approach to development.
-      </p>
+      <motion.div
+        variants={fade({
+          direction: "left",
+          distance: 25,
+          duration: 1,
+          delay: 4,
+        })}
+        initial="hidden"
+        animate="show"
+      >
+        <HeroTitle />
+      </motion.div>
+
+      <motion.div
+        variants={fade({
+          direction: "right",
+          distance: 0,
+          duration: 0.5,
+          delay: 4.5,
+        })}
+        initial="hidden"
+        animate="show"
+      >
+        <p className="mt-8 max-w-2xl text-base tracking-wider md:text-xl">
+          Explore my developer portfolio, a curated collection of projects
+          demonstrating technical expertise and problem-solving skills.{" "}
+          <br className="hidden sm:block" /> From web applications to software
+          solutions, explore examples of my work and approach to development.
+        </p>
+      </motion.div>
     </header>
   );
 };

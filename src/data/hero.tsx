@@ -1,3 +1,13 @@
+export const heroTitle = [
+  "Niel Conradie",
+  "Software Engineer",
+  "Software Developer",
+  "Web Developer",
+  "Backend Developer",
+  "Frontend Developer",
+  "Fullstack Developer",
+];
+
 export const heroItems = [
   {
     title: "1",

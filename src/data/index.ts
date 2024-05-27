@@ -1,4 +1,4 @@
-export { heroItems } from "@/data/hero";
+export { heroItems, heroTitle } from "@/data/hero";
 export { loaderWords } from "@/data/loader";
 export { navItems } from "@/data/navItems";
 

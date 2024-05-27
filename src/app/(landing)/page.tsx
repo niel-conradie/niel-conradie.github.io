@@ -1,4 +1,4 @@
-import { Hero } from "@/components/section";
+import { Hero } from "@/components/section/hero/index";
 
 export default function Landing() {
   return (
