@@ -1,4 +1,5 @@
-import { Hero } from "@/components/section/hero/index";
+import { Hero } from "@/components/section/hero/";
+import { Projects } from "@/components/section/projects";
 
 export default function Landing() {
   return (
@@ -8,9 +9,7 @@ export default function Landing() {
       </section>
 
       <section id="projects">
-        <h3 className="text-center text-4xl">
-          Projects<span className="text-primary">.</span>
-        </h3>
+        <Projects />
       </section>
     </main>
   );

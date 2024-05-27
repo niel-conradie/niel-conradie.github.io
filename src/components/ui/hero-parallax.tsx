@@ -69,7 +69,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="relative flex h-[300vh] flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d]"
+      className="relative flex h-[156.25rem] flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d] md:h-[165.625rem]"
     >
       <Header />
       <motion.div
@@ -168,9 +168,9 @@ export const Card = ({
         />
       </div>
       <div className="pointer-events-none absolute inset-0 h-full w-full bg-background/95 opacity-0 backdrop-blur group-hover/item:opacity-80 supports-[backdrop-filter]:bg-background/60"></div>
-      <h2 className="absolute bottom-4 left-4 text-foreground opacity-0 group-hover/item:opacity-100">
+      <p className="absolute bottom-4 left-4 text-foreground opacity-0 group-hover/item:opacity-100">
         {item.title}
-      </h2>
+      </p>
     </motion.div>
   );
 };
