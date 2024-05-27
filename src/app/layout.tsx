@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme";
 
 import { cn } from "@/lib/utils";
 
+import { Loader } from "@/components/utils";
 import type { Metadata } from "next";
 
 const fontSans = FontSans({
@@ -43,6 +44,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
+          <Loader />
           {children}
         </ThemeProvider>
       </body>

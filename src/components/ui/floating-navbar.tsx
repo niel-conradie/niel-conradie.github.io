@@ -76,7 +76,9 @@ export const FloatingNav = ({
             >
               <Link href={navItem.link}>
                 <span className="block text-2xl sm:hidden">{navItem.icon}</span>
-                <span className="hidden text-sm sm:block">{navItem.name}</span>
+                <span className="hidden text-sm font-semibold tracking-wider sm:block">
+                  {navItem.name}
+                </span>
                 <span className="sr-only block sm:hidden">{navItem.name}</span>
               </Link>
             </Button>

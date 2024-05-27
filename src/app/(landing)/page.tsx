@@ -1,6 +1,6 @@
 import { Hero } from "@/components/section";
 
-export default function LandingPage() {
+export default function Landing() {
   return (
     <main>
       <section id="home">
