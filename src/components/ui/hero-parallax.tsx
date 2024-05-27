@@ -98,14 +98,13 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <header className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4 py-20 md:py-40">
-      <h1 className="text-2xl font-bold md:text-7xl">
-        The Ultimate <br /> development studio
-      </h1>
+    <header className="text relative left-0 top-0 mx-auto w-full max-w-7xl px-4 py-20 md:py-40">
+      <h1 className="text-2xl font-bold md:text-7xl">Niel Conradie</h1>
       <p className="mt-8 max-w-2xl text-base md:text-xl">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+        Explore my developer portfolio, a curated collection of projects
+        demonstrating technical expertise and problem-solving skills.{" "}
+        <br className="hidden sm:block" /> From web applications to software
+        solutions, explore examples of my work and approach to development.
       </p>
     </header>
   );

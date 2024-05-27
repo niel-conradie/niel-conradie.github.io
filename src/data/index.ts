@@ -1,2 +1,2 @@
-export { heroItems } from "@/data/heroItems";
+export { heroItems } from "@/data/hero";
 export { navItems } from "@/data/navItems";
