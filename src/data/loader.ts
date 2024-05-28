@@ -10,9 +10,6 @@ export const loaderWords = [
   },
   {
     text: "Portfolio",
-  },
-  {
-    text: ".",
     className: "text-primary",
   },
 ];

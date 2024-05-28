@@ -31,7 +31,6 @@ export default function HeroTitle() {
           <CarouselItem key={index}>
             <h1 className="pb-2 text-3xl font-bold tracking-wider md:text-5xl">
               {item}
-              <span className="text-primary">.</span>
             </h1>
           </CarouselItem>
         ))}
