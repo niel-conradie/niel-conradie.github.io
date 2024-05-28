@@ -69,7 +69,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="relative flex h-[156.25rem] flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d] md:h-[165.625rem]"
+      className="relative flex h-[2425px] flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d] md:h-[2550px] xl:h-[2575px]"
     >
       <Header />
       <motion.div
@@ -158,16 +158,16 @@ export const Card = ({
       key={item.title}
       className="group/item relative h-96 w-[30rem] flex-shrink-0"
     >
-      <div className="block group-hover/item:shadow-2xl ">
+      <div className="block group-hover/item:shadow-2xl">
         <Image
           src={item.thumbnail}
           height="600"
           width="600"
-          className="absolute inset-0 h-full w-full object-cover object-left-top"
+          className="absolute inset-0 h-full w-full rounded-lg object-cover object-left-top"
           alt={item.title}
         />
       </div>
-      <div className="pointer-events-none absolute inset-0 h-full w-full bg-background/95 opacity-0 backdrop-blur group-hover/item:opacity-80 supports-[backdrop-filter]:bg-background/60"></div>
+      <div className="pointer-events-none absolute inset-0 h-full w-full rounded-lg bg-background/95 opacity-0 backdrop-blur group-hover/item:opacity-80 supports-[backdrop-filter]:bg-background/60"></div>
       <p className="absolute bottom-4 left-4 text-foreground opacity-0 group-hover/item:opacity-100">
         {item.title}
       </p>

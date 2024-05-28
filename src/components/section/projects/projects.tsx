@@ -5,6 +5,8 @@ import Link from "next/link";
 import React from "react";
 
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 
@@ -26,11 +28,11 @@ export default function Projects() {
 
           {/* Core component */}
           <SparklesCore
-            className="h-full w-full"
+            className="-mt-16 h-full w-full"
             background="transparent"
             minSize={0.4}
             maxSize={1}
-            particleDensity={100}
+            particleDensity={500}
             particleColor="#1db954"
           />
 
@@ -38,9 +40,9 @@ export default function Projects() {
           <div className="absolute inset-0 h-full w-full [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
 
-        <div className="mt-20">
+        <div className="">
           <TracingBeam className="px-6">
-            <div className="container relative mx-auto grid grid-cols-1 gap-x-12 pt-4 antialiased xl:grid-cols-2">
+            <div className="container relative mx-auto grid grid-cols-1 gap-20 pt-4 antialiased xl:grid-cols-2">
               {projects.map((item, index) => (
                 <CardContainer key={index}>
                   <CardBody className="group/card relative h-auto w-auto rounded-lg border border-border bg-card p-6 text-card-foreground hover:shadow-2xl hover:shadow-foreground sm:w-[30rem]">
@@ -55,30 +57,30 @@ export default function Projects() {
                       {item.description}
                     </CardItem>
                     <CardItem className="mt-4 w-full" translateZ="100">
-                      <Image
-                        className="h-60 w-full rounded-lg object-cover group-hover/card:shadow-xl"
-                        src={item.image}
-                        height="1000"
-                        width="1000"
-                        alt="Thumbnail"
-                      />
+                      <BackgroundGradient>
+                        <Image
+                          className="h-60 w-full rounded-lg object-cover group-hover/card:shadow-xl"
+                          src={item.image}
+                          height="1000"
+                          width="1000"
+                          alt="Thumbnail"
+                        />
+                      </BackgroundGradient>
                     </CardItem>
                     <div className="mt-10 flex items-center justify-between">
-                      <CardItem
-                        className="rounded-xl px-4 py-2 text-xs font-normal dark:text-white"
-                        href="https://twitter.com/mannupaaji"
-                        target="__blank"
-                        as={Link}
-                        translateZ={20}
-                      >
-                        Try now →
+                      <CardItem translateZ={20}>
+                        <Link href={item.source}>
+                          <HoverBorderGradient as="button" aria-label="Source">
+                            <span>Source</span>
+                          </HoverBorderGradient>
+                        </Link>
                       </CardItem>
-                      <CardItem
-                        className="rounded-xl bg-black px-4 py-2 text-xs font-bold text-white dark:bg-white dark:text-black"
-                        translateZ={20}
-                        as="button"
-                      >
-                        Sign up
+                      <CardItem translateZ={20}>
+                        <Link href={item.preview}>
+                          <HoverBorderGradient as="button" aria-label="Preview">
+                            <span>Preview</span>
+                          </HoverBorderGradient>
+                        </Link>
                       </CardItem>
                     </div>
                   </CardBody>
