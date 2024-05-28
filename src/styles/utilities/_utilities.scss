@@ -1,2 +1,35 @@
 @layer utilities {
+  .django {
+    color: hsl(var(--django));
+  }
+  .next-js {
+    color: hsl(var(--next-js));
+  }
+  .react {
+    color: hsl(var(--react));
+  }
+  .postgresql {
+    color: hsl(var(--postgresql));
+  }
+  .redux-toolkit {
+    color: hsl(var(--redux-toolkit));
+  }
+  .zod {
+    color: hsl(var(--zod));
+  }
+  .tailwindcss {
+    color: hsl(var(--tailwindcss));
+  }
+  .css {
+    color: hsl(var(--css));
+  }
+  .sass {
+    color: hsl(var(--sass));
+  }
+  .shadcn-ui {
+    color: hsl(var(--shadcn-ui));
+  }
+  .framer-motion {
+    color: hsl(var(--framer-motion));
+  }
 }

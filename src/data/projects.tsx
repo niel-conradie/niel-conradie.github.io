@@ -1,10 +1,8 @@
 import {
   SiDjango,
-  SiDocker,
   SiNextdotjs,
   SiPostgresql,
   SiReact,
-  SiReacthookform,
   SiRedux,
   SiShadcnui,
   SiTailwindcss,
@@ -15,7 +13,7 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 export const projects = [
   {
     title: "Project 1",
-    description: "Django & Next.js Task Manager Application",
+    description: "Django & React Task Manager Application",
     image: "/images/thumbnail.jpg",
     source: "#",
     preview: "#",
@@ -26,14 +24,24 @@ export const projects = [
         class: "django",
       },
       {
-        name: "Next.js",
-        icon: <SiNextdotjs />,
-        class: "next-js",
+        name: "React",
+        icon: <SiReact />,
+        class: "react",
+      },
+      {
+        name: "PostgreSQL",
+        icon: <SiPostgresql />,
+        class: "postgresql",
       },
       {
         name: "Redux Toolkit",
         icon: <SiRedux />,
         class: "redux-toolkit",
+      },
+      {
+        name: "Zod",
+        icon: <SiZod />,
+        class: "zod",
       },
       {
         name: "Tailwindcss",
@@ -49,26 +57,6 @@ export const projects = [
         name: "Framer Motion",
         icon: <TbBrandFramerMotion />,
         class: "framer-motion",
-      },
-      {
-        name: "React Hook Form",
-        icon: <SiReacthookform />,
-        class: "react-hook-form",
-      },
-      {
-        name: "Zod",
-        icon: <SiZod />,
-        class: "zod",
-      },
-      {
-        name: "Docker",
-        icon: <SiDocker />,
-        class: "docker",
-      },
-      {
-        name: "PostgreSQL",
-        icon: <SiPostgresql />,
-        class: "postgresql",
       },
     ],
   },
@@ -90,9 +78,19 @@ export const projects = [
         class: "next-js",
       },
       {
+        name: "PostgreSQL",
+        icon: <SiPostgresql />,
+        class: "postgresql",
+      },
+      {
         name: "Redux Toolkit",
         icon: <SiRedux />,
         class: "redux-toolkit",
+      },
+      {
+        name: "Zod",
+        icon: <SiZod />,
+        class: "zod",
       },
       {
         name: "Tailwindcss",
@@ -108,26 +106,6 @@ export const projects = [
         name: "Framer Motion",
         icon: <TbBrandFramerMotion />,
         class: "framer-motion",
-      },
-      {
-        name: "React Hook Form",
-        icon: <SiReacthookform />,
-        class: "react-hook-form",
-      },
-      {
-        name: "Zod",
-        icon: <SiZod />,
-        class: "zod",
-      },
-      {
-        name: "Docker",
-        icon: <SiDocker />,
-        class: "docker",
-      },
-      {
-        name: "PostgreSQL",
-        icon: <SiPostgresql />,
-        class: "postgresql",
       },
     ],
   },
@@ -144,9 +122,19 @@ export const projects = [
         class: "next-js",
       },
       {
+        name: "PostgreSQL",
+        icon: <SiPostgresql />,
+        class: "postgresql",
+      },
+      {
         name: "Redux Toolkit",
         icon: <SiRedux />,
         class: "redux-toolkit",
+      },
+      {
+        name: "Zod",
+        icon: <SiZod />,
+        class: "zod",
       },
       {
         name: "Tailwindcss",
@@ -163,10 +151,29 @@ export const projects = [
         icon: <TbBrandFramerMotion />,
         class: "framer-motion",
       },
+    ],
+  },
+  {
+    title: "Project 4",
+    description: "Fullstack Next.js Image Uploader Application",
+    source: "#",
+    preview: "#",
+    image: "/images/thumbnail.jpg",
+    stack: [
       {
-        name: "React Hook Form",
-        icon: <SiReacthookform />,
-        class: "react-hook-form",
+        name: "Next.js",
+        icon: <SiNextdotjs />,
+        class: "next-js",
+      },
+      {
+        name: "PostgreSQL",
+        icon: <SiPostgresql />,
+        class: "postgresql",
+      },
+      {
+        name: "Redux Toolkit",
+        icon: <SiRedux />,
+        class: "redux-toolkit",
       },
       {
         name: "Zod",
@@ -174,43 +181,19 @@ export const projects = [
         class: "zod",
       },
       {
-        name: "Docker",
-        icon: <SiDocker />,
-        class: "docker",
-      },
-      {
-        name: "PostgreSQL",
-        icon: <SiPostgresql />,
-        class: "postgresql",
-      },
-    ],
-  },
-  {
-    title: "Project 4",
-    description: "Fullstack Django Image Uploader Application",
-    source: "#",
-    preview: "#",
-    image: "/images/thumbnail.jpg",
-    stack: [
-      {
-        name: "Django",
-        icon: <SiDjango />,
-        class: "django",
-      },
-      {
         name: "Tailwindcss",
         icon: <SiTailwindcss />,
         class: "tailwindcss",
       },
       {
-        name: "Docker",
-        icon: <SiDocker />,
-        class: "docker",
+        name: "Shadcn/ui",
+        icon: <SiShadcnui />,
+        class: "shadcn-ui",
       },
       {
-        name: "PostgreSQL",
-        icon: <SiPostgresql />,
-        class: "postgresql",
+        name: "Framer Motion",
+        icon: <TbBrandFramerMotion />,
+        class: "framer-motion",
       },
     ],
   },

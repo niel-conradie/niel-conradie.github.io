@@ -69,16 +69,18 @@ export const FloatingNav = ({
         {navItems.map((navItem: any, idx: number) => (
           <li key={`link=${idx}`}>
             <Button
-              className="w-18 transition-all duration-300 hover:scale-110 hover:text-primary"
+              className="w-18 transition-all duration-300 hover:scale-110 hover:text-primary xl:hover:scale-100"
               variant={"ghost"}
               aria-label={navItem.name}
               asChild
             >
               <Link href={navItem.link}>
-                <span className="block text-2xl sm:hidden">{navItem.icon}</span>
-                <span className="hidden text-sm font-semibold tracking-wider sm:block">
-                  {navItem.name}
-                </span>
+                <div className="flex items-center justify-center space-x-2">
+                  <span className="block text-2xl">{navItem.icon}</span>
+                  <span className="hidden text-sm font-semibold tracking-wider sm:block">
+                    {navItem.name}
+                  </span>
+                </div>
                 <span className="sr-only block sm:hidden">{navItem.name}</span>
               </Link>
             </Button>

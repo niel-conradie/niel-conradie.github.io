@@ -47,7 +47,7 @@ export function HoverBorderGradient({
   };
 
   const highlight =
-    "radial-gradient(75% 181.15942028985506% at 50% 50%, #3275F8 0%, rgba(255, 255, 255, 0) 100%)";
+    "radial-gradient(75% 181.15942028985506% at 50% 50%, #1db954 0%, rgba(255, 255, 255, 0) 100%)";
 
   useEffect(() => {
     if (!hovered) {
@@ -65,14 +65,14 @@ export function HoverBorderGradient({
       }}
       onMouseLeave={() => setHovered(false)}
       className={cn(
-        "relative flex h-min w-fit  flex-col flex-nowrap content-center items-center justify-center gap-10 overflow-visible rounded-full border bg-black/20 decoration-clone p-px transition duration-500 hover:bg-black/10 dark:bg-white/20",
+        "relative flex h-min w-fit flex-col flex-nowrap content-center items-center justify-center gap-10 overflow-visible rounded-lg border bg-black/20 decoration-clone p-px transition duration-300 hover:bg-background/10",
         containerClassName,
       )}
       {...props}
     >
       <div
         className={cn(
-          "z-10 w-auto rounded-[inherit] bg-black px-4 py-2 text-white",
+          "z-10 w-auto rounded-[inherit] bg-background px-4 py-2 text-foreground hover:text-primary",
           className,
         )}
       >

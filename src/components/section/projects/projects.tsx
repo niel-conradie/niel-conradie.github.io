@@ -6,6 +6,7 @@ import React from "react";
 
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { Badge } from "@/components/ui/badge";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { TracingBeam } from "@/components/ui/tracing-beam";
@@ -40,7 +41,7 @@ export default function Projects() {
           <div className="absolute inset-0 h-full w-full [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
 
-        <div className="">
+        <div className="pb-20">
           <TracingBeam className="px-6">
             <div className="container relative mx-auto grid grid-cols-1 gap-20 pt-4 antialiased xl:grid-cols-2">
               {projects.map((item, index) => (
@@ -52,7 +53,7 @@ export default function Projects() {
                     <CardItem
                       className="mt-2 max-w-sm text-sm text-muted-foreground"
                       as="p"
-                      translateZ="60"
+                      translateZ="75"
                     >
                       {item.description}
                     </CardItem>
@@ -67,18 +68,44 @@ export default function Projects() {
                         />
                       </BackgroundGradient>
                     </CardItem>
-                    <div className="mt-10 flex items-center justify-between">
-                      <CardItem translateZ={20}>
+                    <CardItem translateZ="75">
+                      <ul className="mt-4 flex flex-wrap items-center justify-center gap-2">
+                        {item.stack.map((item, index) => (
+                          <li key={index}>
+                            <Badge className="rounded-lg" variant="outline">
+                              <span
+                                className={`${item.class} px-1 py-[0.125rem] text-sm`}
+                              >
+                                {item.icon}
+                              </span>
+                              <span className="sr-only">{item.name}</span>
+                            </Badge>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardItem>
+                    <div className="mt-4 flex items-center justify-between">
+                      <CardItem translateZ="50">
                         <Link href={item.source}>
-                          <HoverBorderGradient as="button" aria-label="Source">
-                            <span>Source</span>
+                          <HoverBorderGradient
+                            className="sm:w-32"
+                            as="button"
+                            clockwise={true}
+                            aria-label="Source"
+                          >
+                            <span className="tracking-wider">Source</span>
                           </HoverBorderGradient>
                         </Link>
                       </CardItem>
-                      <CardItem translateZ={20}>
+                      <CardItem translateZ="50">
                         <Link href={item.preview}>
-                          <HoverBorderGradient as="button" aria-label="Preview">
-                            <span>Preview</span>
+                          <HoverBorderGradient
+                            className="sm:w-32"
+                            as="button"
+                            clockwise={false}
+                            aria-label="Preview"
+                          >
+                            <span className="tracking-wider">Preview</span>
                           </HoverBorderGradient>
                         </Link>
                       </CardItem>
