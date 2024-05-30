@@ -16,6 +16,16 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { Heading } from "@/components/utils";
 
@@ -62,7 +72,7 @@ export default function About() {
             <h3 className="text-center">Qualifications</h3>
             <div className="">
               <Carousel
-                className="w-96 md:w-[500px] xl:w-[1150px]"
+                className="w-96 md:w-[550px] xl:w-[1150px]"
                 setApi={setApi}
                 plugins={[plugin.current]}
                 opts={{
@@ -74,12 +84,9 @@ export default function About() {
               >
                 <CarouselContent>
                   {qualifications.map((item, index) => (
-                    <CarouselItem
-                      key={index}
-                      className="pb-6 pt-2 xl:basis-1/2"
-                    >
+                    <CarouselItem key={index} className="py-14 xl:basis-1/2">
                       <CardContainer>
-                        <CardBody className="group/card relative h-[350px] w-80 cursor-grab rounded-lg border border-border bg-card p-6 text-card-foreground shadow-[0_8px_16px_rgb(0_0_0/0.4)] hover:shadow-[0_10px_20px_rgb(0_0_0/0.8)] sm:w-[30rem] md:h-[400px] xl:h-[475px]">
+                        <CardBody className="group/card relative h-[400px] w-80 cursor-grab rounded-lg border border-border bg-card p-6 text-card-foreground shadow-[0_8px_16px_rgb(0_0_0/0.4)] hover:shadow-[0_10px_20px_rgb(0_0_0/0.8)] md:w-[480px] md:h-[480px] xl:h-[480px]">
                           <CardItem
                             className="text-center text-xl font-bold"
                             as="h4"
@@ -117,18 +124,34 @@ export default function About() {
                               </Link>
                             </CardItem>
                             <CardItem translateZ="50">
-                              <Link href={item.link}>
-                                <HoverBorderGradient
-                                  className="sm:w-32"
-                                  as="button"
-                                  clockwise={false}
-                                  aria-label="Preview"
-                                >
-                                  <span className="tracking-wider">
-                                    Preview
-                                  </span>
-                                </HoverBorderGradient>
-                              </Link>
+                              <Dialog>
+                                <DialogTrigger asChild>
+                                  <HoverBorderGradient
+                                    className="sm:w-32"
+                                    as="button"
+                                    clockwise={false}
+                                    aria-label="Preview"
+                                  >
+                                    <span className="tracking-wider">
+                                      Preview
+                                    </span>
+                                  </HoverBorderGradient>
+                                </DialogTrigger>
+                                <DialogContent className="h-fit w-fit">
+                                  <DialogHeader>
+                                    <DialogTitle className="text-center">
+                                      {item.name}
+                                    </DialogTitle>
+                                  </DialogHeader>
+                                  <Image
+                                    className="rounded-lg p-4"
+                                    src={item.image}
+                                    alt={item.name}
+                                    width="1000"
+                                    height="1000"
+                                  />
+                                </DialogContent>
+                              </Dialog>
                             </CardItem>
                           </div>
                         </CardBody>
@@ -137,7 +160,7 @@ export default function About() {
                   ))}
                 </CarouselContent>
                 {/* NAVIGATION */}
-                <div className="hidden sm:block">
+                <div className="hiddensm:block">
                   <CarouselPrevious />
                   <CarouselNext />
                 </div>
