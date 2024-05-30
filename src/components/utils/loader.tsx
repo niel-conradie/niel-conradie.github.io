@@ -16,7 +16,7 @@ export default function Loader() {
         direction: "up",
         distance: 0,
         duration: 0.5,
-        delay: 0, // FIXME: 4
+        delay: 4, // FIXME: 4
       })}
       initial="show"
       animate="hidden"
