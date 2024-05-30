@@ -23,12 +23,16 @@ export default function Projects() {
           <div className="container relative mx-auto grid grid-cols-1 gap-20 pt-4 antialiased xl:grid-cols-2">
             {projects.map((item, index) => (
               <CardContainer key={index}>
-                <CardBody className="group/card relative h-auto w-auto rounded-lg border border-border bg-card p-6 text-card-foreground hover:shadow-2xl hover:shadow-foreground sm:w-[30rem]">
-                  <CardItem className="text-xl font-bold" translateZ="50">
+                <CardBody className="group/card relative h-auto w-auto rounded-lg border border-border bg-card p-6 text-card-foreground shadow-[0_8px_16px_rgb(0_0_0/0.4)] hover:shadow-[0_10px_20px_rgb(0_0_0/0.8)] sm:w-[30rem]">
+                  <CardItem
+                    className="text-center text-xl font-bold"
+                    as="h4"
+                    translateZ="50"
+                  >
                     {item.title}
                   </CardItem>
                   <CardItem
-                    className="mt-2 max-w-sm text-sm text-muted-foreground"
+                    className="mt-2 text-center text-sm text-muted-foreground"
                     as="p"
                     translateZ="75"
                   >
@@ -66,7 +70,7 @@ export default function Projects() {
                   </CardItem>
                   <div className="mt-4 flex items-center justify-between">
                     <CardItem translateZ="50">
-                      <Link href={item.source}>
+                      <Link href={item.source} target="_blank">
                         <HoverBorderGradient
                           className="sm:w-32"
                           as="button"
@@ -78,7 +82,7 @@ export default function Projects() {
                       </Link>
                     </CardItem>
                     <CardItem translateZ="50">
-                      <Link href={item.preview}>
+                      <Link href={item.preview} target="_blank">
                         <HoverBorderGradient
                           className="sm:w-32"
                           as="button"
